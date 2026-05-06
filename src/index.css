@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  font-family: "poppins", sans-serif;
+  scroll-behavior: smooth;
+  transition: all auto linear;
+  outline: none;
+}
+
+:root {
+  --background: #082307;
+  --card: #016437;
+  --primaryyelow: #fdd300;
+  --primary: #15ff00;
+  --text: #ffffff;
+}
