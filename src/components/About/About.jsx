@@ -44,7 +44,7 @@ const About = () => {
           return (
             <div
               key={item.id}
-              className="text-[var(--text)] p-6 rounded-xl h-max cursor-pointer bg-[var(--primary)]/10 hover:bg-[var(--primary)]/30 border border-[var(--primary)]/50 hover:border-[var(--primary)] w-70 items-center justify-center flex flex-col gap-4 hover:scale-105 duration-300 hover:shadow-2xl shadow-[#15ff00]/50 "
+              className="text-[var(--text)] p-6 rounded-xl h-max cursor-pointer bg-[var(--primary)]/10 hover:bg-[var(--primary)]/50 border border-[var(--primary)]/50 hover:border-[var(--primary)] w-70 items-center justify-center flex flex-col gap-4 hover:scale-105 duration-300 hover:shadow-2xl shadow-[#15ff00]/70 "
             >
               <item.Icon className="text-5xl text-[var(--primary)] " />
               <h1 className="font-bold text-2xl">{item.title}</h1>

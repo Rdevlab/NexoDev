@@ -4,14 +4,6 @@ import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import sliderImage from "../../assets/projects/slider.jsx";
 const Slider = () => {
   let index = 1;
-  setInterval(() => {
-    if (index >= 6) {
-      index = 1;
-      index++;
-    }
-    index++;
-  }, 3000);
-
   return (
     <div className="w-full h-max items-center flex flex-col p-8 gap-4 justify-end relative">
       {sliderImage.map((slide) => {
@@ -26,7 +18,6 @@ const Slider = () => {
             <h1 className="text-4xl text-white font-bold px-4 p-1 backdrop-blur-xl rounded-full ">
               {slide.title}
             </h1>
-            {/* <h1 className={`text-white`}>{slide.info}</h1> */}
           </>
         );
       })}
@@ -34,10 +25,7 @@ const Slider = () => {
         <button className="p-4 bg-[var(--primary)]/70 text-green-950 rounded-full">
           <FaChevronLeft />
         </button>
-        <button
-          className="p-4 bg-[var(--primary)]/70 text-green-950 rounded-full"
-          onClick={() => setInterval()}
-        >
+        <button className="p-4 bg-[var(--primary)]/70 text-green-950 rounded-full">
           <FaChevronRight />
         </button>
       </div>

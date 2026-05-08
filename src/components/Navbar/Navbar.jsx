@@ -42,7 +42,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <div className="w-full px-12 py-4 backdrop-blur-md bg-[var(--primary)]/10 flex justify-between text-[var(--text)] fixed top-0 z-30 border-b border-[var(--primary)]">
+    <div className=" rounded-b-2xl px-12 py-4 backdrop-blur-md bg-[var(--primary)]/10 flex justify-between text-[var(--text)] fixed top-0 right-20 left-20 z-30 border-b border-[var(--primary)]">
       <div className="text-xl font-bold text-[var(--primary)]">NexoDev</div>
       <ul className="flex gap-8 items-center text-lg">
         {Navlinks.map((link) => {
