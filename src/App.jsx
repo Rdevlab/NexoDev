@@ -14,7 +14,7 @@ const App = () => {
   const [loginForm, setloginForm] = useState("notlogin");
   return (
     <div
-      className="h-screen w-full bg-fixed"
+      className="min-h-screen w-full bg-fixed bg-center"
       style={{
         backgroundImage: `url(${Background})`,
         backgroundSize: "cover",

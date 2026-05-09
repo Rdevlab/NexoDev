@@ -32,7 +32,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="h-screen w-full bg-[var(--background)] flex flex-col items-center justify-center text-[var(--text)]"
+      className="h-screen w-full bg-[var(--background)] flex gap-4 flex-col items-center justify-center text-[var(--text)]"
     >
       <div className="w-full flex items-center justify-center flex-col gap-4">
         <span className="px-4 p-1 border gap-2 border-[var(--primary)]/50 text-[var(--primary)] rounded-full text-sm flex items-center shadow-[0_0_30px_#15ff00]/50 bg-[var(--primary)]/20 hover:bg-[var(--primary)]/30 duration-300 hover:scale-105 cursor-pointer ">
@@ -41,15 +41,9 @@ const Contact = () => {
         </span>
       </div>
 
-      <div className="w-full flex items-center justify-center flex-col gap-4">
-        <span className="px-4 p-1 border gap-2 border-[var(--primary)]/50 text-[var(--primary)] -z-3 rounded-full text-sm flex items-center shadow-[0_0_30px_#15ff00]/50 bg-[var(--primary)]/20 hover:bg-[var(--primary)]/30 duration-300 hover:scale-105 cursor-pointer ">
-          <IoMdCheckmarkCircleOutline className="text-xl font-bold" />
-          Get in touch
-        </span>
-      </div>
-      <div className="w-200 z-1 h-110 border rounded-xl  z-2 backdrop-blur-sm relative flex p-10 border-white/10 shadow-2xl shadow-white/20">
-        <div className="w-70 h-full flex items-start p-4 flex-col gap-6 justify-center text-sm relative">
-          <h1 className="absolute top-0 left-0 font-bold text-3xl">
+      <div className="xl:w-200  z-1 xl:h-110 h-max border rounded-xl  z-2 backdrop-blur-sm relative flex xl:flex-row flex-col p-10 border-white/10 shadow-2xl shadow-white/20">
+        <div className="xl:w-70 h-full flex items-start p-4 flex-col gap-6 justify-center text-sm relative">
+          <h1 className="xl:absolute top-0 left-0 font-bold text-3xl">
             Contact Us
           </h1>
 
@@ -128,10 +122,10 @@ const Contact = () => {
         </form>
       </div>
       {/* background dots */}
-      <span className="z-1  w-40 h-40 bg-[var(--primary)]/40 translate-x-92 translate-y-58 absolute rounded-full"></span>
-      <span className="z-1  w-40 h-40 bg-[var(--primary)]/40 -translate-x-98 -translate-y-18 absolute rounded-full"></span>
-      <span className="z-1  w-20 h-20 bg-[var(--text)]/40 translate-x-78 -translate-y-28 absolute rounded-full"></span>
-      <span className="z-1  w-20 h-20 bg-[var(--text)]/40 -translate-x-68 translate-y-38 absolute rounded-full"></span>
+      <span className="z-1 hidden md:flex xl:flex w-40 h-40 bg-[var(--primary)]/40 translate-x-92 translate-y-58 absolute rounded-full"></span>
+      <span className="z-1  hidden md:flex xl:flex w-40 h-40 bg-[var(--primary)]/40 -translate-x-98 -translate-y-18 absolute rounded-full"></span>
+      <span className="z-1  hidden md:flex xl:flex w-20 h-20 bg-[var(--text)]/40 translate-x-78 -translate-y-28 absolute rounded-full"></span>
+      <span className="z-1  hidden md:flex xl:flex w-20 h-20 bg-[var(--text)]/40 -translate-x-68 translate-y-38 absolute rounded-full"></span>
     </section>
   );
 };

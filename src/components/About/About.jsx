@@ -32,14 +32,14 @@ const About = () => {
   return (
     <section
       id="about"
-      className="w-full h-max flex flex-col gap-6 bg-[var(--background)] items-center justify-center p-4 pt-50"
+      className="w-full h-max flex flex-col gap-6 bg-[var(--background)] items-center justify-center p-4 pt-26 xl:pt-50"
     >
       <span className="px-4 p-1 border gap-2 border-[var(--primary)]/50 text-[var(--primary)] rounded-full text-sm flex items-center shadow-[0_0_30px_#15ff00]/50 bg-[var(--primary)]/20 hover:bg-[var(--primary)]/30 duration-300 hover:scale-105 cursor-pointer ">
         <IoMdCheckmarkCircleOutline className="text-xl font-bold" />
         About us
       </span>
       <span className="text-[var(--primary)] text-sm">Experienced Team</span>
-      <div className="w-full min-h-[50vh] flex items-center gap-10 justify-center p-10 bg-[var(--background)]">
+      <div className="w-full min-h-[50vh] flex flex-col xl:flex-row items-center gap-10 justify-center p-10 bg-[var(--background)]">
         {aboutTitles.map((item) => {
           return (
             <div
