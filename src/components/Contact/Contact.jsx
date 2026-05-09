@@ -41,7 +41,7 @@ const Contact = () => {
         </span>
       </div>
 
-      <div className="xl:w-200  z-1 xl:h-110 h-max border rounded-xl  z-2 backdrop-blur-sm relative flex xl:flex-row flex-col p-10 border-white/10 shadow-2xl shadow-white/20">
+      <div className="xl:w-200  z-1 xl:h-110 h-max border rounded-xl  z-2 backdrop-blur-sm relative flex xl:flex-row flex-col p-10 border-white/10 shadow-2xl shadow-green-600/20 bg-[var(--background)]/40">
         <div className="xl:w-70 h-full flex items-start p-4 flex-col gap-6 justify-center text-sm relative">
           <h1 className="xl:absolute top-0 left-0 font-bold text-3xl">
             Contact Us

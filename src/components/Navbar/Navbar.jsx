@@ -44,7 +44,7 @@ const Navbar = () => {
   ];
   return (
     <>
-      <div className=" rounded-b-2xl px-12 py-4 backdrop-blur-md bg-[var(--primary)]/10 flex justify-between text-[var(--text)]  top-0 xl:right-20 w-full xl:left-20 z-30 border-b border-[var(--primary)]">
+      <div className=" rounded-b-2xl px-12 py-2 backdrop-blur-md bg-[var(--background)]/10 flex justify-between text-[var(--text)] fixed  top-0 xl:right-20 w-full xl:w-auto xl:left-20 z-30 border-b border-[var(--primary)]/40">
         <div className="text-xl w-full font-bold text-[var(--primary)] overflow-hidden h-10 w-auto">
           <img src={logo} className="h-full xl:scale-160 scale-180" alt="" />
         </div>

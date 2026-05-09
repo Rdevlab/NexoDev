@@ -6,7 +6,7 @@ import Slider from "../ImageSlider/Slider";
 const Hero = () => {
   return (
     <div
-      className="w-full min-h-screen flex flex-col gap-4 items-center p-28  bg-[var(--background)]/70"
+      className="w-full min-h-screen flex flex-col gap-4 items-center p-28  bg-[var(--background)]/40"
       id="home"
     >
       <h1 className="text-8xl font-bold text-[var(--primary)] drop-shadow-xl drop-shadow-black">

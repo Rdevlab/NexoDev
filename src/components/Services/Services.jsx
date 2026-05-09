@@ -31,7 +31,7 @@ const Services = () => {
   return (
     <div
       id="service"
-      className="w-full min-h-[80vh] flex-col flex items-center justify-center pt-10 gap-16 bg-[var(--background)]"
+      className="w-full min-h-screen flex-col flex items-center justify-center gap-16 bg-[var(--background)]"
     >
       <div className="w-full flex items-center justify-center flex-col gap-4">
         <span className="px-4 p-1 border gap-2 border-[var(--primary)]/50 text-[var(--primary)] rounded-full text-sm flex items-center shadow-[0_0_30px_#15ff00]/50 bg-[var(--primary)]/20 hover:bg-[var(--primary)]/30 duration-300 hover:scale-105 cursor-pointer ">

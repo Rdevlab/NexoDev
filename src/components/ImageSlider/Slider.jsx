@@ -15,7 +15,7 @@ const Slider = () => {
               alt={slide.title}
               className={`w-100 h-50 duration-300 shadow-2xl image${index < 6 ? index++ : (index = 1)} rounded-xl `}
             />
-            <h1 className="text-4xl text-white font-bold px-4 p-1 backdrop-blur-xl rounded-full ">
+            <h1 className="text-xl text-white border border-[var(--primary)] font-bold px-4 bg-[var(--primary)]/20 p-1 backdrop-blur-xl rounded-full ">
               {slide.title}
             </h1>
           </>
