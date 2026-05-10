@@ -1,19 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 import project from "../../assets/projects/project1.png";
 import Slider from "../ImageSlider/Slider";
+import Navbar from "../Navbar/Navbar";
+import Account from "../Account/Account";
+import Login from "../Login/Login";
 
 const Hero = () => {
   return (
     <div
-      className="w-full min-h-screen flex flex-col gap-4 items-center p-28  bg-[var(--background)]/40"
+      className="w-full min-h-screen flex flex-col gap-4 items-center xl:p-28 p-10 pt-30  bg-[var(--background)]/40"
       id="home"
     >
-      <h1 className="text-8xl font-bold text-[var(--primary)] drop-shadow-xl drop-shadow-black">
+      <Navbar />
+
+      <button
+        onClick={() => {
+          document
+            .querySelector("#loginSection div")
+            .classList.remove("hidden");
+        }}
+      >
+        <Account />
+      </button>
+
+      <div id="loginSection">
+        <Login />
+      </div>
+      <h1 className="xl:text-8xl text-4xl font-bold text-[var(--primary)] drop-shadow-xl drop-shadow-black">
         NexoDev Team
       </h1>
 
-      <p className="w-[40ch] text-center text-xl font-bold text-[var(--text)] drop-shadow-xl drop-shadow-black">
+      <p className="xl:w-[40ch] w-[30ch] text-center xl:text-xl font-bold text-[var(--text)] drop-shadow-xl drop-shadow-black">
         Explore through out modern user interface, responsive UIs and
         interactive web applications
       </p>
