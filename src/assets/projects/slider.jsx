@@ -21,7 +21,6 @@ const sliderImage = [
     title: "Aurum Online Library 3",
     info: "This is so smart to have the best books for free",
     link: "https://google.com",
-    tech: "",
   },
   {
     id: 4,
@@ -29,31 +28,6 @@ const sliderImage = [
     title: "Aurum Online Library 4",
     info: "This is so smart to have the best books for free",
     link: "https://google.com",
-    tech: "",
-  },
-  {
-    id: 5,
-    image: new URL("./project1.png", import.meta.url).href,
-    title: "Aurum Online Library 5",
-    info: "This is so smart to have the best books for free",
-    link: "https://google.com",
-    tech: "",
-  },
-  {
-    id: 6,
-    image: new URL("./project1.png", import.meta.url).href,
-    title: "Aurum Online Library 6",
-    info: "This is so smart to have the best books for free",
-    link: "https://google.com",
-    tech: "",
-  },
-  {
-    id: 7,
-    image: new URL("./project1.png", import.meta.url).href,
-    title: "Aurum Online Library 7",
-    info: "This is so smart to have the best books for free",
-    link: "https://google.com",
-    tech: "",
   },
 ];
 export default sliderImage;

@@ -5,57 +5,73 @@ import Slider from "../ImageSlider/Slider";
 import Navbar from "../Navbar/Navbar";
 import Account from "../Account/Account";
 import Login from "../Login/Login";
+import Ratings from "../Ratings/Ratings";
 
 const Hero = () => {
+  const miniLinks = [
+    {
+      id: 1,
+      name: "User interfaces design",
+    },
+    {
+      id: 2,
+      name: "Responsive web applications",
+    },
+    {
+      id: 3,
+      name: "Creative Components",
+    },
+    {
+      id: 4,
+      name: "Customer editions service",
+    },
+  ];
   return (
     <div
-      className="w-full min-h-screen flex flex-col gap-4 items-center xl:p-28 p-10 pt-30  bg-[var(--background)]/40"
+      className="w-full h-screen flex gap-4 items-center bg-[var(--background)] p-4"
       id="home"
     >
-      <Navbar />
+      <div className="w-full h-full pt-30 p-10 relative flex flex-col justify-between text-[var(--text)]">
+        <Navbar />
+        <div>
+          <h1 className="text-6xl text-[var(--primary)] font-bold ">
+            NexoDev Team
+          </h1>
+          <p className="w-[50ch] px-8">
+            A pro team for web development that is designed to generate clean
+            code for users and managed projects for demands A pro team for web
+            development that is designed to generate clean code for users and
+            managed projects for demands co
+          </p>
+        </div>
 
-      <button
-        onClick={() => {
-          document
-            .querySelector("#loginSection div")
-            .classList.remove("hidden");
-        }}
-      >
-        <Account />
-      </button>
-
-      <div id="loginSection">
-        <Login />
+        <div className="flex flex-col gap-2">
+          {miniLinks.map((item) => {
+            return (
+              <span
+                className="px-4 p-1 hover:bg-[var(--primary)]/60 duration-300 border border-[var(--primary)]/40 w-max rounded-full bg-[var(--primary)]/10 text-xs"
+                key={item.id}
+              >
+                {item.name}
+              </span>
+            );
+          })}
+        </div>
       </div>
-      <h1 className="xl:text-8xl text-4xl font-bold text-[var(--primary)] drop-shadow-xl drop-shadow-black">
-        NexoDev Team
-      </h1>
 
-      <p className="xl:w-[40ch] w-[30ch] text-center xl:text-xl font-bold text-[var(--text)] drop-shadow-xl drop-shadow-black">
-        Explore through out modern user interface, responsive UIs and
-        interactive web applications
-      </p>
+      <div className="w-300 bg-[var(--primary)]/10 h-[90vh] rounded-4xl relative flex flex-col hidden xl:flex ">
+        <Ratings />
 
-      <div className="flex w-full">
+        <div
+          className="bg-[var(--background)] w-max border-12 absolute top-0 right-0 rounded-bl-3xl border-[var(--background)] z-50
+           after:flex after:content-'' after:h-12 after:w-30  after:absolute after:-left-30 after:border-t-12 after:border-r-12 after:-top-6 after:rounded-tr-4xl after:bg-transparent after:border-[var(--background)]
+          before:flex before:content-'' before:h-12 before:w-30  before:absolute before:-right-6 before:border-t-12 before:border-r-12 before:-bottom-12 before:rounded-tr-4xl before:border-[var(--background)] before:bg-transparent
+          "
+        >
+          <Account />
+        </div>
         <Slider />
       </div>
-
-      <span className="absolute bottom-10 flex gap-8 items-center">
-        <a
-          href="#about"
-          className="px-4 p-1 rounded-full flex items-center gap-2 bg-[var(--primary)]/30 border border-[var(--primary)] text-[var(--text)] font-bold shadow-[0_0_50px_#15ff00] hover:scale-110 duration-200 hover:-translate-y-2 "
-        >
-          Explore
-          <FaChevronDown />
-        </a>
-        <a
-          href="#about"
-          className="px-4 p-1 rounded-full flex items-center gap-2 bg-[var(--primary)]/30 border border-[var(--primary)] text-[var(--text)] font-bold shadow-[0_0_50px_#15ff00] hover:scale-110 duration-200 hover:-translate-y-2 "
-        >
-          Hire
-          <FaChevronDown />
-        </a>
-      </span>
     </div>
   );
 };
