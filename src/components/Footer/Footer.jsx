@@ -49,7 +49,7 @@ const Footer = () => {
     },
   ];
   return (
-    <div className="w-full flex justify-between p-6 justify-center flex-col bg-[var(--background)] text-[var(--text)] bg-[linear-gradient(135deg,#000000d0,_#000000d0),url('https://rosettalandscape.co.uk/wp-content/uploads/2022/07/footer-background.jpg')] bg-center border-t border-white/30 flex flex-col w-full gap-2">
+    <div className="w-full flex justify-between p-6 justify-center flex-col bg-[var(--background)] text-[var(--text)] bg-[linear-gradient(135deg,#000000d0,_#000000d0),url('https://rosettalandscape.co.uk/wp-content/uploads/2022/07/footer-background.jpg')] bg-center border-t h-70 border-white/30 flex flex-col gap-2">
       <div className="xl:h-40 h-30 text-xs overflow-hidden flex flex items-center gap-8 xl:gap-40">
         <img src={logo} alt="" className="h-full  scale-160" />
         <div className="flex flex-col gap-4 hidden xl:flex">
@@ -64,7 +64,7 @@ const Footer = () => {
             odio dolorum veniam. Iusto quasi perferendis nostrum.
           </p>
         </div>
-        <ul className="flex flex-col gap-2">
+        <ul className="flex flex-col gap-2 w-30">
           <h1 className="font-bold text-xl text-[var(--primary)]">
             Quick links
           </h1>
