@@ -1,9 +1,17 @@
 import React, { useState } from "react";
 import { FaUser, FaKey, FaEye } from "react-icons/fa";
 const Login = () => {
+  const alert = () => {
+    return (
+      <div className="fixed top-10 m-auto p-4 flex items-center">
+        <h1>form submited successfully</h1>
+      </div>
+    );
+  };
+  alert();
   return (
     <div
-      className="w-full h-screen z-30 flex items-center justify-center bg-black/90 fixed top-0 right-0 left-0 hidden"
+      className="w-full h-screen z-50 flex items-center justify-center bg-black/90 fixed top-0 right-0 left-0 hidden"
       id="overlay"
       onClick={(e) => {
         if (e.target === document.querySelector("#overlay"))
@@ -31,7 +39,9 @@ const Login = () => {
         </div>
         <input
           type="submit"
-          onClick={() => alert("submited")}
+          onClick={() => {
+            alert;
+          }}
           value={"Login"}
           className="w-full text-center p-2 bg-[var(--text)]/40 font-bold rounded-md"
         />

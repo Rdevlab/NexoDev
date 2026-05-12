@@ -63,7 +63,7 @@ const Hero = () => {
         <Ratings />
 
         <div
-          className="bg-[var(--background)] w-max border-12 absolute top-0 right-0 rounded-bl-3xl border-[var(--background)] z-50
+          className="bg-[var(--background)] w-max border-12 absolute top-0 right-0 rounded-bl-3xl border-[var(--background)] z-10
            after:flex after:content-'' after:h-12 after:w-30  after:absolute after:-left-30 after:border-t-12 after:border-r-12 after:-top-6 after:rounded-tr-4xl after:bg-transparent after:border-[var(--background)]
           before:flex before:content-'' before:h-12 before:w-30  before:absolute before:-right-6 before:border-t-12 before:border-r-12 before:-bottom-12 before:rounded-tr-4xl before:border-[var(--background)] before:bg-transparent
           "

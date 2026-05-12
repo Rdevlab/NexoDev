@@ -6,7 +6,7 @@ const Projects = () => {
   return (
     <div
       id="project"
-      className="flex items-center h-max  w-full bg-[var(--background)] flex-col xl:p-20 p-6 gap-10"
+      className="flex items-center h-screen justify-center  w-full bg-[var(--background)] flex-col xl:p-20 p-6 gap-6"
     >
       <div className="w-full flex items-center justify-center flex-col gap-4">
         <span className="px-4 p-1 border gap-2 border-[var(--primary)]/50 text-[var(--primary)] rounded-full text-sm flex items-center shadow-[0_0_30px_#15ff00]/50 bg-[var(--primary)]/20 hover:bg-[var(--primary)]/30 duration-300 hover:scale-105 cursor-pointer ">
@@ -17,7 +17,7 @@ const Projects = () => {
           Explore through our latest Projects
         </p>
       </div>
-      <div className="w-full flex gap-6 overflow-x-scroll">
+      <div className="w-full flex gap-2 overflow-x-scroll">
         {sliderImage.map((project) => {
           return (
             <div

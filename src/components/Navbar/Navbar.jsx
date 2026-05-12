@@ -44,8 +44,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className=" rounded-full px-12 py-2  backdrop-blur-md bg-[var(--background)]/10 flex justify-between text-[var(--primary)] fixed  top-0 w-full xl:w-max xl:left-20 xl:top-4 z-30 border border-[var(--primary)]/40">
-        <ul className="xl:flex hidden gap-8 items-center ">
+      <nav className=" xl:rounded-full px-12 py-2  backdrop-blur-md bg-[var(--background)]/10 flex justify-between text-[var(--primary)] fixed  xl:top-0 xl:bottom-auto  bottom-0  w-full xl:w-max xl:left-20 left-0 xl:top-4 z-30 border border-[var(--primary)]/40">
+        <ul className="flex gap-8 items-center ">
           {Navlinks.map((link) => {
             return (
               <li
@@ -63,7 +63,6 @@ const Navbar = () => {
             );
           })}
         </ul>
-        <FaBars className="xl:hidden flex text-4xl" />
       </nav>
     </>
   );
