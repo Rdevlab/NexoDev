@@ -11,7 +11,7 @@ const Login = () => {
   alert();
   return (
     <div
-      className="w-full h-screen z-50 flex items-center justify-center bg-black/90 fixed top-0 right-0 left-0 hidden"
+      className="w-full backdrop-blur-md h-screen z-50 flex items-center justify-center bg-black/90 fixed top-0 right-0 left-0 hidden"
       id="overlay"
       onClick={(e) => {
         if (e.target === document.querySelector("#overlay"))

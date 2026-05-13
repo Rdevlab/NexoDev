@@ -14,17 +14,17 @@ import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 const Contact = () => {
   const icons = [
     {
-      id: 1,
+      id: 401,
       Icon: FaWhatsapp,
       link: "",
     },
     {
-      id: 2,
+      id: 402,
       Icon: FaInstagram,
       link: "",
     },
     {
-      id: 3,
+      id: 403,
       Icon: FaFacebookF,
       link: "",
     },
@@ -35,13 +35,13 @@ const Contact = () => {
       className="h-screen w-full bg-[var(--background)] flex gap-4 flex-col items-center justify-center text-[var(--text)]"
     >
       <div className="w-full flex items-center justify-center flex-col gap-4">
-        <span className="px-4 p-1 border gap-2 border-[var(--primary)]/50 text-[var(--primary)] rounded-full text-sm flex items-center shadow-[0_0_30px_#15ff00]/50 bg-[var(--primary)]/20 hover:bg-[var(--primary)]/30 duration-300 hover:scale-105 cursor-pointer ">
+        <span className="px-4 p-1 border gap-2 border-[var(--primary)]/50 text-[var(--primary)] rounded-full text-sm flex items-center shadow-[0_0_30px_#8c00ff]/50 bg-[var(--primary)]/20 hover:bg-[var(--primary)]/30 duration-300 hover:scale-105 cursor-pointer ">
           <IoMdCheckmarkCircleOutline className="text-xl font-bold" />
           Contact
         </span>
       </div>
 
-      <div className="xl:w-200  z-1 xl:h-110 h-max border rounded-xl  z-2 backdrop-blur-sm relative flex xl:flex-row flex-col p-10 border-white/10 shadow-2xl shadow-green-600/20 bg-[var(--background)]/40">
+      <div className="xl:w-200  z-1 xl:h-110 h-max border rounded-xl  z-2 backdrop-blur-sm relative flex xl:flex-row flex-col p-10 border-white/10 shadow-2xl shadow-[#8c00ff]/20 bg-[var(--background)]/40">
         <div className="xl:w-70 h-full flex items-start p-4 flex-col gap-6 justify-center text-sm relative">
           <h1 className="xl:absolute top-0 left-0 font-bold text-3xl">
             Contact Us

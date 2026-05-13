@@ -3,17 +3,17 @@ import React from "react";
 const Ratings = () => {
   const ratings = [
     {
-      id: 1,
+      id: 101,
       number: "12k+",
       title: "customers",
     },
     {
-      id: 2,
+      id: 102,
       number: "4k+",
       title: "Projects",
     },
     {
-      id: 3,
+      id: 103,
       number: "7.7",
       title: "Rating",
     },
@@ -25,7 +25,7 @@ const Ratings = () => {
       {ratings.map((item) => {
         return (
           <div
-            className="flex flex-col p-4 items-center w-28 rounded-2xl bg-[var(--primary)]/50 border border-[var(--primary)] text-[var(--text)] duration-300 hover:scale-110 hover:bg-[var(--primary)]/70 "
+            className="flex flex-col p-4  items-center w-28 rounded-2xl bg-[var(--primary)]/30 border border-[var(--primary)] text-[var(--text)] duration-300 hover:scale-110 hover:bg-[var(--primary)]/70 "
             key={item.id}
           >
             <span className="text-4xl font-bold">{item.number}</span>

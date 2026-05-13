@@ -5,46 +5,46 @@ import logo from "../../assets/logo/logo.png.png";
 const Footer = () => {
   const navlinks = [
     {
-      id: 1,
+      id: 501,
       name: "Home",
       link: "#home",
     },
     {
-      id: 2,
+      id: 502,
       name: "About",
       link: "#about",
     },
     {
-      id: 3,
+      id: 503,
       name: "Projects",
       link: "#project",
     },
     {
-      id: 4,
+      id: 504,
       name: "Services",
       link: "#service",
     },
     {
-      id: 5,
+      id: 505,
       name: "Contact",
       link: "#contact",
     },
   ];
   const faq = [
     {
-      id: 1,
+      id: 601,
       q: "Privacy & Policy",
     },
     {
-      id: 2,
+      id: 602,
       q: "Top shared links",
     },
     {
-      id: 3,
+      id: 603,
       q: "Refrences",
     },
     {
-      id: 4,
+      id: 604,
       q: "FAQs",
     },
   ];

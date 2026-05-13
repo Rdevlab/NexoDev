@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Background from "./assets/backgrounds/mainBackground.png";
 import Hero from "./components/Hero/Hero";
 import Slider from "./components/ImageSlider/Slider";
 import About from "./components/About/About";
@@ -10,14 +9,7 @@ import Footer from "./components/Footer/Footer";
 import Login from "./components/Login/Login";
 const App = () => {
   return (
-    <div
-      className="min-h-screen w-full bg-fixed bg-center"
-      style={{
-        backgroundImage: `url(${Background})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+    <div className="min-h-screen w-full bg-fixed bg-center bg-gradient-to-b from-[var(--primary)] via-[var(--background)] to-[var(--primary)]">
       <main>
         <Login />
         <Hero />

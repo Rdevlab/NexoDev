@@ -5,7 +5,7 @@ import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 const About = () => {
   const aboutTitles = [
     {
-      id: 1,
+      id: 301,
       Icon: FaCode,
       title: "Clean Code",
       description:
@@ -13,7 +13,7 @@ const About = () => {
       feedback: "2K+ provided user interfaces",
     },
     {
-      id: 1,
+      id: 302,
       Icon: FaUsers,
       title: "Clean Code",
       description:
@@ -21,7 +21,7 @@ const About = () => {
       feedback: "150+ Active Usrs",
     },
     {
-      id: 1,
+      id: 303,
       Icon: FaPhone,
       title: "Clean Code",
       description:
@@ -34,7 +34,7 @@ const About = () => {
       id="about"
       className="w-full h-screen justify-center flex flex-col gap-6 bg-[var(--background)] items-center justify-center p-4 pt-26 "
     >
-      <span className="px-4 p-1 border gap-2 border-[var(--primary)]/50 text-[var(--primary)] rounded-full text-sm flex items-center shadow-[0_0_30px_#15ff00]/50 bg-[var(--primary)]/20 hover:bg-[var(--primary)]/30 duration-300 hover:scale-105 cursor-pointer ">
+      <span className="px-4 p-1 border gap-2 border-[var(--primary)]/50 text-[var(--primary)] rounded-full text-sm flex items-center shadow-[0_0_30px_#8c00ff]/50 bg-[var(--primary)]/20 hover:bg-[var(--primary)]/30 duration-300 hover:scale-105 cursor-pointer ">
         <IoMdCheckmarkCircleOutline className="text-xl font-bold" />
         About us
       </span>
@@ -44,7 +44,7 @@ const About = () => {
           return (
             <div
               key={item.id}
-              className="text-[var(--text)] p-6 rounded-xl h-max cursor-pointer bg-[var(--primary)]/10 hover:bg-[var(--primary)]/50 border border-[var(--primary)]/50 hover:border-[var(--primary)] w-70 items-center justify-center flex flex-col gap-4 hover:scale-105 duration-300 hover:shadow-2xl shadow-[#15ff00]/70 "
+              className="text-[var(--text)] p-6 rounded-xl h-max cursor-pointer bg-[var(--primary)]/10 hover:bg-[var(--primary)]/50 border border-[var(--primary)]/50 hover:border-[var(--primary)] w-70 items-center justify-center flex flex-col gap-4 hover:scale-105 duration-300 hover:shadow-2xl shadow-[#8c00ff]/70 "
             >
               <item.Icon className="text-5xl text-[var(--primary)] " />
               <h1 className="font-bold text-2xl">{item.title}</h1>

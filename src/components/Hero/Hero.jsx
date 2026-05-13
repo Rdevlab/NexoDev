@@ -10,31 +10,31 @@ import Ratings from "../Ratings/Ratings";
 const Hero = () => {
   const miniLinks = [
     {
-      id: 1,
+      id: 701,
       name: "User interfaces design",
     },
     {
-      id: 2,
+      id: 702,
       name: "Responsive web applications",
     },
     {
-      id: 3,
+      id: 703,
       name: "Creative Components",
     },
     {
-      id: 4,
+      id: 704,
       name: "Customer editions service",
     },
   ];
   return (
     <div
-      className="w-full h-screen flex gap-4 items-center bg-[var(--background)] p-4"
+      className="w-full h-screen flex gap-4 items-center bg-[linear-gradient(to_left,_var(--background),_var(--background),_var(--primary))] p-4"
       id="home"
     >
       <div className="w-full h-full pt-30 p-10 relative flex flex-col justify-between text-[var(--text)]">
         <Navbar />
         <div>
-          <h1 className="text-6xl text-[var(--primary)] font-bold ">
+          <h1 className="text-6xl text-[var(--primary)] font-bold drop-shadow-lg drop-shadow=black">
             NexoDev Team
           </h1>
           <p className="w-[50ch] px-8">
@@ -49,7 +49,7 @@ const Hero = () => {
           {miniLinks.map((item) => {
             return (
               <span
-                className="px-4 p-1 hover:bg-[var(--primary)]/60 duration-300 border border-[var(--primary)]/40 w-max rounded-full bg-[var(--primary)]/10 text-xs"
+                className="px-4 p-1 hover:bg-[var(--primary)]/60 duration-300 border border-[var(--primary)]/40 w-max rounded-full bg-[var(--primary)]/10 text-xs shadow-lg"
                 key={item.id}
               >
                 {item.name}

@@ -1,6 +1,6 @@
 const sliderImage = [
   {
-    id: 1,
+    id: 50,
     image: new URL("./project1.png", import.meta.url).href,
     title: "Aurum Online Library 1",
     info: "This is so smart to have the best books for free",
@@ -8,7 +8,7 @@ const sliderImage = [
     tech: "",
   },
   {
-    id: 2,
+    id: 51,
     image: new URL("./project1.png", import.meta.url).href,
     title: "Aurum Online Library 2",
     info: "This is so smart to have the best books for free",
@@ -16,14 +16,14 @@ const sliderImage = [
     tech: "",
   },
   {
-    id: 3,
+    id: 52,
     image: new URL("./project1.png", import.meta.url).href,
     title: "Aurum Online Library 3",
     info: "This is so smart to have the best books for free",
     link: "https://google.com",
   },
   {
-    id: 4,
+    id: 53,
     image: new URL("./project1.png", import.meta.url).href,
     title: "Aurum Online Library 4",
     info: "This is so smart to have the best books for free",
