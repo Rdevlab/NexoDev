@@ -34,10 +34,12 @@ const Hero = () => {
       <div className="w-full h-full pt-30 p-10 relative flex flex-col justify-between text-[var(--text)]">
         <Navbar />
         <div>
-          <h1 className="text-6xl text-[var(--primary)] font-bold drop-shadow-lg drop-shadow=black">
+          <h1 className="text-6xl text-[var(--primary)] font-bold drop-shadow-lg drop-shadow=black animate-[moveUp_1s__linear_forwards] opacity-0">
             NexoDev Team
           </h1>
-          <p className="w-[50ch] px-8">
+          <p
+            className={`w-[50ch] px-8 animate-[moveUp_1s_1s_linear_forwards] opacity-0`}
+          >
             A pro team for web development that is designed to generate clean
             code for users and managed projects for demands A pro team for web
             development that is designed to generate clean code for users and
@@ -47,9 +49,10 @@ const Hero = () => {
 
         <div className="flex flex-col gap-2">
           {miniLinks.map((item) => {
+            let index = 0.5;
             return (
               <span
-                className="px-4 p-1 hover:bg-[var(--primary)]/60 duration-300 border border-[var(--primary)]/40 w-max rounded-full bg-[var(--primary)]/10 text-xs shadow-lg"
+                className={`px-4 p-1 hover:bg-[var(--primary)]/60 duration-300 opacity-0 animate-[enterFromLeft_.5s_1s_linear_forwards] border border-[var(--primary)]/40 w-max rounded-full bg-[var(--primary)]/10 text-xs shadow-lg`}
                 key={item.id}
               >
                 {item.name}

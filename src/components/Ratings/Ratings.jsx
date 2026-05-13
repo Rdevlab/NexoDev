@@ -28,7 +28,7 @@ const Ratings = () => {
             className="flex flex-col p-4  items-center w-28 rounded-2xl bg-[var(--primary)]/30 border border-[var(--primary)] text-[var(--text)] duration-300 hover:scale-110 hover:bg-[var(--primary)]/70 "
             key={item.id}
           >
-            <span className="text-4xl font-bold">{item.number}</span>
+            <span className="text-4xl font-bold grewUp">{item.number}</span>
             <span>{item.title}</span>
           </div>
         );

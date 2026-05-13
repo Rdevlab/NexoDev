@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url("./components/Animation/Animation.css");
 
 ::-webkit-scrollbar {
   display: none;
@@ -17,4 +18,42 @@
   --primaryyelow: #fdd300;
   --primary: #aa00ff;
   --text: #ffffff;
+}
+
+.grewUp {
+  animation: grewUp 0.8s linear forwards;
+}
+@keyframes grewUp {
+  0% {
+    scale: 0;
+  }
+  60% {
+    scale: 1.4;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes moveUp {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes enterFromLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
 }

@@ -11,7 +11,7 @@ const Login = () => {
   alert();
   return (
     <div
-      className="w-full backdrop-blur-md h-screen z-50 flex items-center justify-center bg-black/90 fixed top-0 right-0 left-0 hidden"
+      className="w-full backdrop-blur-md h-screen z-50 flex items-center justify-center  bg-gradient-to-bl from-[var(--primary)]/50 to-[var(--background)]/50 fixed top-0 right-0 left-0 hidden"
       id="overlay"
       onClick={(e) => {
         if (e.target === document.querySelector("#overlay"))
@@ -20,20 +20,25 @@ const Login = () => {
     >
       <form
         action=""
-        className="p-4 bg-[var(--text)]/30 backdrop-blur-xl border rounded-xl flex flex-col items-center gap-6"
+        className="p-4 bg-[var(--primary)]/30 shadow-2xl backdrop-blur-xl text-[var(--text)] rounded-xl flex flex-col items-center gap-6 grewUp"
       >
         <FaUser className="text-5xl" />
         <div className="flex items-center gap-2 p-2 rounded-md border w-full">
           <FaUser />
-          <input type="text" placeholder="Enter your username" name="" id="" />
+          <input
+            type="text"
+            placeholder="Enter your username"
+            name=""
+            id="username"
+          />
         </div>
         <div className="flex items-center gap-2 p-2 rounded-md border w-full">
           <FaKey />
           <input
             type="password"
-            placeholder="Enter your username"
+            placeholder="Enter your password"
             name=""
-            id=""
+            id="password"
           />
           <FaEye />
         </div>
