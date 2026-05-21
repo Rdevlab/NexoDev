@@ -32,7 +32,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="w-full h-screen justify-center flex flex-col gap-6 bg-[var(--background)] items-center justify-center p-4 pt-26 "
+      className="w-full min-h-screen justify-center flex flex-col gap-6 bg-[var(--background)] items-center justify-center p-4 pt-26 "
     >
       <span className="px-4 p-1 border gap-2 border-[var(--primary)]/50 text-[var(--primary)] rounded-full text-sm flex items-center shadow-[0_0_30px_#8c00ff]/50 bg-[var(--primary)]/20 hover:bg-[var(--primary)]/30 duration-300 hover:scale-105 cursor-pointer ">
         <IoMdCheckmarkCircleOutline className="text-xl font-bold" />

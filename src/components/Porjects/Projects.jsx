@@ -17,7 +17,7 @@ const Projects = () => {
           Explore through our latest Projects
         </p>
       </div>
-      <div className="w-full flex gap-6 overflow-x-scroll">
+      <div className="w-full h-max flex gap-6 overflow-x-scroll">
         {sliderImage.map((project) => {
           return (
             <div

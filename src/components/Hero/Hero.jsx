@@ -38,7 +38,7 @@ const Hero = () => {
             NexoDev Team
           </h1>
           <p
-            className={`w-[50ch] px-8 animate-[moveUp_1s_1s_linear_forwards] opacity-0`}
+            className={`xl:w-[50ch] px-8 animate-[moveUp_1s_1s_linear_forwards] opacity-0`}
           >
             A pro team for web development that is designed to generate clean
             code for users and managed projects for demands A pro team for web

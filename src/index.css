@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import url("./components/Animation/Animation.css");
 
 ::-webkit-scrollbar {
   display: none;

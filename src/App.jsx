@@ -7,6 +7,7 @@ import Services from "./components/Services/Services";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import Login from "./components/Login/Login";
+import Dashboard from "./components/Dashboard/Dashboard";
 const App = () => {
   return (
     <div className="min-h-screen w-full bg-fixed bg-center bg-gradient-to-b from-[var(--primary)] via-[var(--background)] to-[var(--primary)]">
@@ -18,6 +19,7 @@ const App = () => {
         <Services />
         <Contact />
       </main>
+      {/* <Dashboard /> */}
       <Footer />
     </div>
   );

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./SliderAnimation.css";
 import {
   FaChevronRight,
   FaChevronLeft,
@@ -8,13 +7,22 @@ import {
   FaPhone,
 } from "react-icons/fa";
 import Team from "../../assets/team/Team";
+import { BsTranslate } from "react-icons/bs";
+
+setInterval(() => {
+  document.querySelector("#imageContainer").classList.add("translate-x-420px");
+}, 10000);
 
 const Slider = () => {
   return (
     <div className="w-full h-full bg-white/10 rounded-4xl relative flex rounded-4xl overflow-hidden overflow-x-scroll">
       {Team.map((person) => {
         return (
-          <div className="w-full shrink-0 h-full relative" key={person.id}>
+          <div
+            className="w-full shrink-0 h-full relative"
+            key={person.id}
+            id="imageContainer"
+          >
             <img
               src={person.profile}
               className="w-full h-full flex shrink-0"
