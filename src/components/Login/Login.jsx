@@ -11,7 +11,7 @@ const Login = () => {
   alert();
   return (
     <div
-      className="w-full backdrop-blur-md h-screen z-50 flex items-center justify-center  bg-gradient-to-bl from-[var(--primary)]/50 to-[var(--background)]/50 fixed top-0 right-0 left-0 hidden"
+      className="w-full backdrop-blur-md h-screen z-40 flex items-center justify-center  bg-gradient-to-bl from-[var(--primary)]/50 to-[var(--background)]/50 fixed top-0 right-0 left-0 hidden"
       id="overlay"
       onClick={(e) => {
         if (e.target === document.querySelector("#overlay"))
@@ -43,11 +43,11 @@ const Login = () => {
           <FaEye />
         </div>
         <input
-          type="submit"
+          type="button"
           onClick={() => {
-            alert;
+            document.querySelector("#overView").classList.toggle("hidden");
           }}
-          value={"Login"}
+          value={"Dashboard"}
           className="w-full text-center p-2 bg-[var(--text)]/40 font-bold rounded-md"
         />
       </form>

@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer";
 import Login from "./components/Login/Login";
 import Dashboard from "./components/Dashboard/Dashboard";
 const App = () => {
+  const [Dash, setDash] = useState("on");
   return (
     <div className="min-h-screen w-full bg-fixed bg-center bg-gradient-to-b from-[var(--primary)] via-[var(--background)] to-[var(--primary)]">
       <main>
@@ -19,7 +20,7 @@ const App = () => {
         <Services />
         <Contact />
       </main>
-      {/* <Dashboard /> */}
+      <Dashboard />
       <Footer />
     </div>
   );

@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { IoIosSend, IoMdCheckmarkCircleOutline } from "react-icons/io";
 import sliderImage from "../../assets/projects/slider.jsx";
 
 const Projects = () => {
+  const sliderRef = useRef(null);
+  const [isPaused, setPaused] = useState(false);
+
   return (
     <div
       id="project"
@@ -17,7 +20,12 @@ const Projects = () => {
           Explore through our latest Projects
         </p>
       </div>
-      <div className="w-full h-max flex gap-6 overflow-x-scroll">
+      <div
+        ref={sliderRef}
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+        className="w-full h-max flex gap-6 overflow-x-scroll"
+      >
         {sliderImage.map((project) => {
           return (
             <div

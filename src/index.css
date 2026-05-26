@@ -34,6 +34,18 @@
     scale: 1;
   }
 }
+.grewUp1 {
+  animation: grewUp1 0.5s linear forwards;
+}
+@keyframes grewUp1 {
+  0% {
+    scale: 0;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
 
 @keyframes moveUp {
   from {
