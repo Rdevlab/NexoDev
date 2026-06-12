@@ -1,27 +1,12 @@
 import React, { useState } from "react";
-import Hero from "./components/Hero/Hero";
-import Slider from "./components/ImageSlider/Slider";
-import About from "./components/About/About";
-import Projects from "./components/Porjects/Projects";
-import Services from "./components/Services/Services";
-import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
 import Login from "./components/Login/Login";
-import Dashboard from "./components/Dashboard/Dashboard";
+import Aside from "./components/Aside/Aside";
+
 const App = () => {
-  const [Dash, setDash] = useState("on");
   return (
-    <div className="min-h-screen w-full bg-fixed bg-center bg-gradient-to-b from-[var(--primary)] via-[var(--background)] to-[var(--primary)]">
-      <main>
-        <Login />
-        <Hero />
-        <About />
-        <Projects />
-        <Services />
-        <Contact />
-      </main>
-      <Dashboard />
-      <Footer />
+    <div className="bg-[url('https://th.bing.com/th/id/R.7d3024544713bff8f0b0fc4118065824?rik=PF9J8iQDxUUnmg&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f08%2fComputer-background-cool-desktop.jpg&ehk=UROrojTWZpuvqafwLJSLNgKy27Ik%2bHoaDRzQ0u8Ldw4%3d&risl=&pid=ImgRaw&r=0')] w-full h-screen bg-no-repeat bg-cover bg-center">
+      {<Login />}
+      <Aside />
     </div>
   );
 };

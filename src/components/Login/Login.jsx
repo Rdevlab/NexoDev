@@ -1,57 +1,56 @@
-import React, { useState } from "react";
-import { FaUser, FaKey, FaEye } from "react-icons/fa";
+import React, { use, useState } from "react";
+import { FaUser, FaUserTie } from "react-icons/fa";
+import Users from "../Users/Users";
+import Projects from "../Projects/Projects";
+import HomeBtn from "../Home/HomeBtn";
+
 const Login = () => {
-  const alert = () => {
-    return (
-      <div className="fixed top-10 m-auto p-4 flex items-center">
-        <h1>form submited successfully</h1>
-      </div>
-    );
-  };
-  alert();
+  const [login, setLogin] = useState(false);
+  const [username, setUsername] = useState(null);
+  const [password, setPassword] = useState(null);
+  const [profile, setProfile] = useState(null);
   return (
-    <div
-      className="w-full backdrop-blur-md h-screen z-40 flex items-center justify-center  bg-gradient-to-bl from-[var(--primary)]/50 to-[var(--background)]/50 fixed top-0 right-0 left-0 hidden"
-      id="overlay"
-      onClick={(e) => {
-        if (e.target === document.querySelector("#overlay"))
-          e.target.classList.toggle("hidden");
-      }}
-    >
-      <form
-        action=""
-        className="p-4 bg-[var(--primary)]/30 shadow-2xl backdrop-blur-xl text-[var(--text)] rounded-xl flex flex-col items-center gap-6 grewUp"
-      >
-        <FaUser className="text-5xl" />
-        <div className="flex items-center gap-2 p-2 rounded-md border w-full">
-          <FaUser />
-          <input
-            type="text"
-            placeholder="Enter your username"
-            name=""
-            id="username"
-          />
+    <>
+      {login == false && (
+        <div className="flex flex-col justify-center shadow-2xl items-center gap-2 p-4 rounded-xl bg-white/40 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <FaUserTie className="text-4xl" />
+          <div className="flex flex-col gap-2">
+            <label htmlFor="username">Enter your username</label>
+            <input
+              type="text"
+              id="username"
+              placeholder="username"
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </div>
+          <div className="flex flex-col gap-2">
+            <label htmlFor="password">Enter your password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="password"
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
+            />
+          </div>
+          <button
+            className="w-full p-2 bg-green-600 rounded-xl cursor-pointer"
+            onClick={() => {
+              Users.find((e) => {
+                e.username == username && e.password == password
+                  ? setLogin(true) && setProfile(e.image)
+                  : null;
+              });
+            }}
+          >
+            Login
+          </button>
         </div>
-        <div className="flex items-center gap-2 p-2 rounded-md border w-full">
-          <FaKey />
-          <input
-            type="password"
-            placeholder="Enter your password"
-            name=""
-            id="password"
-          />
-          <FaEye />
-        </div>
-        <input
-          type="button"
-          onClick={() => {
-            document.querySelector("#overView").classList.toggle("hidden");
-          }}
-          value={"Dashboard"}
-          className="w-full text-center p-2 bg-[var(--text)]/40 font-bold rounded-md"
-        />
-      </form>
-    </div>
+      )}
+      {login == true && <Projects username={username} />}
+      <HomeBtn goHome={setLogin} image={profile} />
+    </>
   );
 };
 

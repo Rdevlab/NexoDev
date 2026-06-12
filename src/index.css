@@ -4,18 +4,33 @@
   display: none;
 }
 * {
-  font-family: "poppins", sans-serif;
+  font-family: "Times New Roman", Times, serif;
   scroll-behavior: smooth;
-  transition: all auto linear;
+  transition: all auto linear forwards;
   outline: none;
   user-select: none;
 }
+
+/* pruple color code */
+#00010d
+#010326
+#2d0140
+#660273
+#a305a6
+
+/* green  */
+#f8f8f8
+#337418
+#5dd62c
+#202020
+#0f0f0f
+
 
 :root {
   --background: #000000;
   --card: #016437;
   --primaryyelow: #fdd300;
-  --primary: #aa00ff;
+  --primary: #6d001a;
   --text: #ffffff;
 }
 
@@ -49,7 +64,7 @@
 
 @keyframes moveUp {
   from {
-    transform: translateY(200px);
+    transform: translateY(100px);
     opacity: 0;
   }
   to {
