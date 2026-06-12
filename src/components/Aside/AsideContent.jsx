@@ -65,11 +65,29 @@ const AsideContent = ({ user }) => {
                     );
                   })}
                 </div>
-                <div className="w-full rounded-xl bg-white/40 p-2">
-                  <h1 className="text-xl font-bold">
-                    {e.name}'s team membership
+                <div className="w-full rounded-xl bg-white/10 p-2  flex gap-4 flex-wrap">
+                  <h1 className="text-xl font-bold w-full text-center">
+                    Currently Working on
                   </h1>
-                  <span></span>
+                  {e.group.map((elem) => {
+                    return (
+                      <span
+                        key={elem.id}
+                        className="flex flex-col gap-2 items-center items-center p-2 bg-white/40 rounded-2xl w-30 shrink-0 hover:scale-110 shadow-2xl duration-300"
+                      >
+                        <span className="w-26 h-20 overflow-hidden flex items-center justify-center">
+                          <img
+                            src={elem.logo}
+                            alt={elem.name}
+                            className=" w-full hover:scale-120 duration-300"
+                          />
+                        </span>
+                        <h1 className="text-lg font-bold text-center">
+                          {elem.name}
+                        </h1>
+                      </span>
+                    );
+                  })}
                 </div>
               </div>
             )

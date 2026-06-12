@@ -12,7 +12,7 @@ const Login = () => {
   return (
     <>
       {login == false && (
-        <div className="flex flex-col justify-center shadow-2xl items-center gap-2 p-4 rounded-xl bg-white/40 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div className="flex flex-col justify-center shadow-2xl items-center gap-2 p-4 rounded-xl bg-white/50 backdrop-blur-sm absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <FaUserTie className="text-4xl" />
           <div className="flex flex-col gap-2">
             <label htmlFor="username">Enter your username</label>
