@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Users from "../Users/Users";
 import Tasks from "../Tasks/Tasks";
 import { FaTimes } from "react-icons/fa";
+import LoginBtn from "../LoginBtn/LoginBtn";
+import Login from "../Login/Login";
 
 const AsideContent = ({ user }) => {
+  const [loginForm, setLogin] = useState(false);
   let no = 0.2;
   return (
     <div
-      className="relative rounded-xl bg-white/50 backdrop-blur-sm w-0 shrink-0 overflow-hidden items-end flex flex-col duration-300"
+      className=" rounded-xl bg-white/50 backdrop-blur-sm w-0 shrink-0 overflow-hidden items-end flex flex-col duration-300"
       id="content"
     >
       <button
@@ -49,46 +52,50 @@ const AsideContent = ({ user }) => {
                       </a>
                     );
                   })}
+                  {/* click to btn to open login form */}
                 </div>
-                <div className="flex gap-6 p-2 items-center flex-wrap">
-                  {e.tech.map((t) => {
-                    return (
-                      <span
-                        key={t.id}
-                        className="p-2 rounded-xl drop-shadow-xl  shrink-0 flex flex-col flex items-center justify-center w-30 duration-300 group bg-white/40 shadow-xl cursor-pointer hover:scale-110"
-                      >
-                        <t.Icon
-                          className={`text-3xl duration-300 group-hover:scale-120 drop-shadow-xl`}
-                        />
-                        {t.name}
-                      </span>
-                    );
-                  })}
-                </div>
-                <div className="w-full rounded-xl bg-white/10 p-2  flex gap-4 flex-wrap">
-                  <h1 className="text-xl font-bold w-full text-center">
-                    Currently Working on
-                  </h1>
-                  {e.group.map((elem) => {
-                    return (
-                      <span
-                        key={elem.id}
-                        className="flex flex-col gap-2 items-center items-center p-2 bg-white/40 rounded-2xl w-30 shrink-0 hover:scale-110 shadow-2xl duration-300"
-                      >
-                        <span className="w-26 h-20 overflow-hidden flex items-center justify-center">
-                          <img
-                            src={elem.logo}
-                            alt={elem.name}
-                            className=" w-full hover:scale-120 duration-300"
+
+                <>
+                  <div className="flex gap-6 p-2 items-center flex-wrap">
+                    {e.tech.map((t) => {
+                      return (
+                        <span
+                          key={t.id}
+                          className="p-2 rounded-xl drop-shadow-xl  shrink-0 flex flex-col flex items-center justify-center w-30 duration-300 group bg-white/40 shadow-xl cursor-pointer hover:scale-110"
+                        >
+                          <t.Icon
+                            className={`text-3xl duration-300 group-hover:scale-120 drop-shadow-xl`}
                           />
+                          {t.name}
                         </span>
-                        <h1 className="text-lg font-bold text-center">
-                          {elem.name}
-                        </h1>
-                      </span>
-                    );
-                  })}
-                </div>
+                      );
+                    })}
+                  </div>
+                  <div className="w-full rounded-xl bg-white/10 p-2  flex gap-4 flex-wrap">
+                    <h1 className="text-xl font-bold w-full text-center">
+                      Currently Working on
+                    </h1>
+                    {e.group.map((elem) => {
+                      return (
+                        <span
+                          key={elem.id}
+                          className="flex flex-col gap-2 items-center items-center p-2 bg-white/40 rounded-2xl w-30 shrink-0 hover:scale-110 shadow-2xl duration-300"
+                        >
+                          <span className="w-26 h-20 overflow-hidden flex items-center justify-center">
+                            <img
+                              src={elem.logo}
+                              alt={elem.name}
+                              className=" w-full hover:scale-120 duration-300"
+                            />
+                          </span>
+                          <h1 className="text-lg font-bold text-center">
+                            {elem.name}
+                          </h1>
+                        </span>
+                      );
+                    })}
+                  </div>
+                </>
               </div>
             )
           );

@@ -6,7 +6,7 @@ import AsideContent from "./AsideContent";
 const Aside = () => {
   const [user, setUser] = useState(null);
   return (
-    <div className=" absolute top-20 bottom-20 left-0  flex gap-2 ">
+    <div className="absolute top-20 bottom-20 left-0  flex gap-2 z-30">
       <div
         className="p-2 rounded-r-2xl bg-white/40 backdrop-blur-sm flex flex-col h-full shrink-0 w-18 overflow-y-scroll gap-2 duration-300"
         id="userContainer"

@@ -16,6 +16,7 @@ import {
   FaInstagram,
   FaPhone,
   FaGithub,
+  FaJava,
 } from "react-icons/fa";
 import {
   FaHtml5,
@@ -70,11 +71,16 @@ const Users = [
       { id: 7, name: "Git", Icon: FaGitAlt },
     ],
     socialMedia: [
-      { id: 1, link: "", Icon: FaWhatsapp },
-      { id: 2, link: "", Icon: FaInstagram },
-      { id: 3, link: "", Icon: FaGithub },
+      { id: 1, link: "https://wa.me/93749542078?text=Hello", Icon: FaWhatsapp },
+      {
+        id: 2,
+        link: "https://www.instagram.com/_4K_rohi_Official",
+        Icon: FaInstagram,
+      },
+      { id: 3, link: "https://github.com/Rdevlab", Icon: FaGithub },
     ],
   },
+
   {
     id: 2,
     name: "Latif Kheradmand",
@@ -107,11 +113,20 @@ const Users = [
       { id: 5, name: "React", Icon: FaReact },
       { id: 6, name: "Github", Icon: FaGithub },
       { id: 7, name: "Python", Icon: FaPython },
+      { id: 8, name: "Java", Icon: FaJava },
     ],
     socialMedia: [
-      { id: 1, link: "", Icon: FaWhatsapp },
-      { id: 2, link: "", Icon: FaInstagram },
-      { id: 3, link: "", Icon: FaGithub },
+      {
+        id: 1,
+        link: "https://wa.me/+989964328909?text=Hello",
+        Icon: FaWhatsapp,
+      },
+      {
+        id: 2,
+        link: "https://www.instagram.com/latifkhradmand/",
+        Icon: FaInstagram,
+      },
+      { id: 3, link: "https://github.com/latifkhradmand", Icon: FaGithub },
     ],
   },
   {
@@ -136,9 +151,13 @@ const Users = [
       { id: 6, name: "Github", Icon: FaGithub },
     ],
     socialMedia: [
-      { id: 1, link: "", Icon: FaWhatsapp },
-      { id: 2, link: "", Icon: FaInstagram },
-      { id: 3, link: "", Icon: FaGithub },
+      {
+        id: 1,
+        link: "https://wa.me/+93770711494?text=Hello",
+        Icon: FaWhatsapp,
+      },
+      { id: 2, link: "https://www.instagram.com/myinsta/", Icon: FaInstagram },
+      { id: 3, link: "https://github.com/myusername", Icon: FaGithub },
     ],
   },
   {
@@ -164,9 +183,13 @@ const Users = [
       { id: 6, name: "Github", Icon: FaGithub },
     ],
     socialMedia: [
-      { id: 1, link: "", Icon: FaWhatsapp },
-      { id: 2, link: "", Icon: FaInstagram },
-      { id: 3, link: "", Icon: FaGithub },
+      {
+        id: 1,
+        link: "https://wa.me/+93775509373?text=Hello",
+        Icon: FaWhatsapp,
+      },
+      { id: 2, link: "https://www.instagram.com/myinsta/", Icon: FaInstagram },
+      { id: 3, link: "https://github.com/mahranjan0093-cmyk", Icon: FaGithub },
     ],
   },
   {
@@ -191,9 +214,13 @@ const Users = [
       { id: 6, name: "Github", Icon: FaGithub },
     ],
     socialMedia: [
-      { id: 1, link: "", Icon: FaWhatsapp },
-      { id: 2, link: "", Icon: FaInstagram },
-      { id: 3, link: "", Icon: FaGithub },
+      {
+        id: 1,
+        link: "https://wa.me/+93774385487?text=Hello",
+        Icon: FaWhatsapp,
+      },
+      { id: 2, link: "https://www.instagram.com/myinsta/", Icon: FaInstagram },
+      { id: 3, link: "https://github.com/Ali13767676", Icon: FaGithub },
     ],
   },
   {
@@ -219,9 +246,13 @@ const Users = [
       { id: 6, name: "Github", Icon: FaGithub },
     ],
     socialMedia: [
-      { id: 1, link: "", Icon: FaWhatsapp },
-      { id: 2, link: "", Icon: FaInstagram },
-      { id: 3, link: "", Icon: FaGithub },
+      {
+        id: 1,
+        link: "https://wa.me/+93776774953?text=Hello",
+        Icon: FaWhatsapp,
+      },
+      { id: 2, link: "https://www.instagram.com/myinsta/", Icon: FaInstagram },
+      { id: 3, link: "https://github.com/myusername", Icon: FaGithub },
     ],
   },
   {
@@ -247,9 +278,13 @@ const Users = [
       { id: 6, name: "Github", Icon: FaGithub },
     ],
     socialMedia: [
-      { id: 1, link: "", Icon: FaWhatsapp },
-      { id: 2, link: "", Icon: FaInstagram },
-      { id: 3, link: "", Icon: FaGithub },
+      {
+        id: 1,
+        link: "https://wa.me/+93728327121?text=Hello",
+        Icon: FaWhatsapp,
+      },
+      { id: 2, link: "https://www.instagram.com/myinsta/", Icon: FaInstagram },
+      { id: 3, link: "https://github.com/myusername", Icon: FaGithub },
     ],
   },
 ];

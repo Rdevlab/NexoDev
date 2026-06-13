@@ -9,11 +9,12 @@ const Login = () => {
   const [username, setUsername] = useState(null);
   const [password, setPassword] = useState(null);
   const [profile, setProfile] = useState(null);
+  const [image, setImage] = useState(null);
   return (
-    <>
+    <div className="">
       {login == false && (
-        <div className="flex flex-col justify-center shadow-2xl items-center gap-2 p-4 rounded-xl bg-white/50 backdrop-blur-sm absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <FaUserTie className="text-4xl" />
+        <div className="flex flex-col justify-center shadow-2xl items-center gap-4 p-8 rounded-xl bg-white/50 backdrop-blur-sm absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <FaUserTie className="text-6xl" />
           <div className="flex flex-col gap-2">
             <label htmlFor="username">Enter your username</label>
             <input
@@ -39,7 +40,7 @@ const Login = () => {
             onClick={() => {
               Users.find((e) => {
                 e.username == username && e.password == password
-                  ? setLogin(true) && setProfile(e.image)
+                  ? setLogin(true) && setProfile(e.image) && setUsername(e.name)
                   : null;
               });
             }}
@@ -48,9 +49,9 @@ const Login = () => {
           </button>
         </div>
       )}
-      {login == true && <Projects username={username} />}
+      {login == true && <Projects username={username} image={profile} />}
       <HomeBtn goHome={setLogin} image={profile} />
-    </>
+    </div>
   );
 };
 
