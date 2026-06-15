@@ -9,10 +9,12 @@ import {
   MdGroupAdd,
   MdOutlinePhonelink,
 } from "react-icons/md";
+import { IoIosChatboxes } from "react-icons/io";
 import { SiSaturn } from "react-icons/si";
 import { FaHourglassStart, FaEye } from "react-icons/fa";
 import Messanger from "../Messanger/Messanger";
 import Users from "../Users/Users";
+import HomeBtn from "../Home/HomeBtn";
 
 const Projects = (props) => {
   const baseDelayMs = 200;
@@ -117,8 +119,9 @@ const Projects = (props) => {
           }
         }}
       >
-        <FaEye />
+        <IoIosChatboxes />
       </button>
+      <HomeBtn goHome={props.goHome} />
       {mess == true && <Messanger user={user} />}
     </>
   );

@@ -1,0 +1,27 @@
+@keyframes titleAnimate {
+  from {
+    transform: scale(30);
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+@keyframes infoAnimate {
+  from {
+    transform: translateY(-60px);
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes btnAnimate {
+  from {
+    scale: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}

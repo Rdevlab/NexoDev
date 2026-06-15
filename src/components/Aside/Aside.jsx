@@ -5,13 +5,22 @@ import AsideContent from "./AsideContent";
 
 const Aside = () => {
   const [user, setUser] = useState(null);
+  function release() {
+    document.querySelector("#userContainer").classList.toggle("h-16");
+    document.querySelector("#userContainer").classList.toggle("h-130");
+  }
   return (
-    <div className="absolute top-20 bottom-20 left-0  flex gap-2 z-30">
+    <div className="absolute top-10 h-130  left-0 flex gap-2 z-30">
       <div
-        className="p-2 rounded-r-2xl bg-white/40 backdrop-blur-sm flex flex-col h-full shrink-0 w-18 overflow-y-scroll gap-2 duration-300"
+        className="p-2 rounded-r-2xl bg-white/40 backdrop-blur-sm flex flex-col h-16 shrink-0 w-18 overflow-y-scroll gap-2 duration-300"
         id="userContainer"
       >
-        <button className="w-12 h-12 bg-white/50 rounded-full shrink-0 flex items-center justify-center cursor-pointer">
+        <button
+          onClick={() => {
+            release();
+          }}
+          className="w-12 h-12 bg-white/50 rounded-full shrink-0 flex items-center justify-center cursor-pointer"
+        >
           <FaList />
         </button>
 

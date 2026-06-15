@@ -25,6 +25,9 @@
 #202020
 #0f0f0f
 
+.colorpicker {
+  color: #c6c6c7;
+}
 
 :root {
   --background: #000000;
@@ -70,6 +73,14 @@
   to {
     transform: translate(0);
     opacity: 1;
+  }
+}
+@keyframes moveLeft {
+  from {
+    transform: translatex(100%);
+  }
+  to {
+    transform: translate(0);
   }
 }
 
