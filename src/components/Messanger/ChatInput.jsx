@@ -22,7 +22,7 @@ const ChatInput = (props) => {
     text.value = "";
   }
   return (
-    <div className="p-2 w-full items-center gap-4 flex justify-between sticky bg-gray-400 px-6 w-full rounded-full  bottom-0 right-0">
+    <div className="p-2 w-full items-center gap-4 flex justify-between sticky bg-white/20 px-6 w-full rounded-full  bottom-0 right-0">
       <div>
         <RiEmojiStickerFill className="text-xl cursor-pointer" />
       </div>

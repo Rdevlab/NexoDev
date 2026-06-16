@@ -7,6 +7,15 @@
     opacity: 1;
   }
 }
+@keyframes divAnimate {
+  from {
+    scale: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
 @keyframes infoAnimate {
   from {
     transform: translateY(-60px);

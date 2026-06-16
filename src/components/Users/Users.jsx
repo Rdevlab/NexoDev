@@ -71,13 +71,12 @@ const Users = [
       { id: 7, name: "Git", Icon: FaGitAlt },
     ],
     socialMedia: [
-      { id: 1, link: "https://wa.me/93749542078?text=Hello", Icon: FaWhatsapp },
+      { link: "https://wa.me/93749542078?text=Hello", Icon: FaWhatsapp },
       {
-        id: 2,
         link: "https://www.instagram.com/_4K_rohi_Official",
         Icon: FaInstagram,
       },
-      { id: 3, link: "https://github.com/Rdevlab", Icon: FaGithub },
+      { link: "https://github.com/Rdevlab", Icon: FaGithub },
     ],
   },
 

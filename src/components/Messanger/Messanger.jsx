@@ -13,28 +13,32 @@ const Messanger = (props) => {
   const [reciever, setReciver] = useState(null);
 
   return (
-    <div className="absolute bottom-4 right-0 p-4 shadow-xl bg-[#b9b9b9] rounded-l-xl min-w-170  h-140 flex flex-col animate-[moveLeft_1s_ease_forwards]">
-      <div className="w-max  bg-[#c6c6c7] p-2 border-[#c6c6c7] rounded-full flex items-center ">
+    <div className="absolute bottom-4 right-0  p-4 shadow-xl bg-white/30 backdrop-blur-sm rounded-l-xl min-w-170  h-140 flex flex-col animate-[moveLeft_1s_ease_forwards]">
+      <div className="w-20 justify-center  bg-[#c6c6c7] p-2 border-[#c6c6c7] rounded-full flex items-center ">
         <small>All</small>
       </div>
       <div className="flex w-full h-120">
-        {Users.map((person) => {
+        {Users.map((person, index) => {
           return (
             person.username === user && (
-              <div className="w-max shrink-0 pr-0 h-full flex flex-col justify-between pt-2 ">
+              <div
+                key={index}
+                className="w-max shrink-0 pr-0 h-full flex flex-col justify-between pt-2 "
+              >
                 {/* contact list */}
                 <div className="flex flex-col gap-2 overflow-scroll pb-10">
-                  {Users.map((contact) => {
+                  {Users.map((contact, index) => {
                     return (
                       contact.username !== user && (
                         <button
+                          key={index}
                           onClick={() => {
                             setIsStarted(true);
                             setContactName(contact.name);
                             setContactProfile(contact.image);
                             setReciver(contact.username);
                           }}
-                          className="cursor-pointer select-none flex gap-2 p-2 rounded-l-xl items-center hover:bg-[#c6c6c7] hover:shadow-[5px_6px_10px_rgb(40,40,40),5px_-5px_10px_rgb(230,229,229)] duration-300 userselect"
+                          className="cursor-pointer select-none flex gap-2 p-2 rounded-l-xl items-center hover:bg-white/20 hover:shadow-[5px_6px_10px_rgb(40,40,40),5px_-5px_10px_rgb(230,229,229)] duration-300 userselect"
                         >
                           <img
                             src={contact.image}

@@ -20,15 +20,18 @@ const ChatContainer = (props) => {
 
   return (
     props.active == true && (
-      <div className="flex flex-col gap-1 p-2 w-full h-full justify-start items-end relative">
-        <div className="w-full h-full overflow-scroll pb-30 gap-2 flex flex-col">
-          {messages.map((e) => {
+      <div className="flex flex-col gap-1 p-2 w-full h-full justify-between overflow-scroll items-end relative">
+        <div className="w-full h-max overflow-y-scroll pb-30 gap-2 flex flex-col relative top-0">
+          {messages.map((e, index) => {
             return (
               props.reciever === e.reciver &&
               sender == "you" && (
-                <div className="flex gap-1 w-full items-start justy-end animate-[moveUp_.5s_ease_forwards] opacity-0">
+                <div
+                  key={index}
+                  className="flex gap-1 w-full items-start animate-[moveUp_.5s_ease_forwards] opacity-0"
+                >
                   <div className="w-full p-1 flex flex-col items-end justify-end gap-1">
-                    <span className=" rounded-full w-max justify-end items-end flex px-4 flex-col bg-green-700 shadow-xl text-white">
+                    <span className=" rounded-full w-max justify-end items-end flex px-4 flex-col bg-black/50 backdrop-blur-xl shadow-lg text-white">
                       <span>{e.message}</span>
                     </span>
                     <span className="flex gap-2">

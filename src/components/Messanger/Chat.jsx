@@ -4,9 +4,9 @@ import { BiDotsVertical } from "react-icons/bi";
 
 const Chat = (props) => {
   return (
-    <div className="w-full h-full flex flex-col justify-between z-10 p-2 relative overflow-hidden bg-[#c6c6c7] rounded-xl">
+    <div className="w-full h-full flex flex-col justify-between z-10 p-2 relative overflow-hidden bg-white/20 rounded-xl">
       {props.active == false ? (
-        <div className="w-full h-full z-10 p-2 bg-[#c6c6c7] rounded-xl flex items-center justify-center text-xl">
+        <div className="w-full h-full z-10 p-2 rounded-xl flex items-center justify-center text-xl">
           <span>No chat started yet</span>
         </div>
       ) : (
@@ -34,3 +34,4 @@ const Chat = (props) => {
 };
 
 export default Chat;
+// RW7mbecT2p4SjDJi
