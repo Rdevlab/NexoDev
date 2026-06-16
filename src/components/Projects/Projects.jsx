@@ -120,7 +120,11 @@ const Projects = (props) => {
       >
         <IoIosChatboxes />
       </button>
-      <HomeBtn goHome={props.goHome} />
+      <HomeBtn
+        goHome={props.goHome}
+        setPassword={props.setPassword}
+        setUsername={props.setUsername}
+      />
       {mess == true && <Messanger user={user} />}
     </>
   );

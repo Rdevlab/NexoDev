@@ -71,7 +71,13 @@ const Login = (props) => {
         </div>
       )}
       {login == true && (
-        <Projects username={username} image={profile} goHome={setLogin} />
+        <Projects
+          username={username}
+          setPassword={setPassword}
+          setUsername={setUsername}
+          image={profile}
+          goHome={setLogin}
+        />
       )}
     </div>
   );

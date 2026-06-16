@@ -1,4 +1,4 @@
-import React, { use, useState } from "react";
+import React, { useState } from "react";
 import {
   FaArrowLeft,
   FaArrowRight,
@@ -87,6 +87,11 @@ const Step1 = ({ setSign, sign }) => {
                     required
                     placeholder="type here"
                     onChange={(e) => {
+                      Users.map((elem) => {
+                        return elem.username === e.target.value
+                          ? (e.target.value = "")
+                          : null;
+                      });
                       setUname(e.target.value);
                     }}
                   />
