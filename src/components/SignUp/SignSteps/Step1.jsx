@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useEffectEvent, useState } from "react";
 import {
   FaArrowLeft,
   FaArrowRight,
@@ -53,20 +53,21 @@ const Step1 = ({ setSign, sign }) => {
     });
     setSign(false);
   };
+  const [alert, setAlert] = useState(false);
 
   return (
     sign === true && (
-      <div className=" text-white backdrop-blur-xs  rounded-2xl flex flex-col gap-4 max-w-300 max-h-160 w-max h-max duration-300 border p-10 flex relative">
+      <div className=" text-white backdrop-blur-xs overflow-hidden rounded-2xl flex flex-col gap-4 xl:max-w-300 xl:max-h-160 xl:w-max w-full xl:h-max duration-300 border xl:p-10 p-2 flex">
         {/* profile */}
         <div className="flex gap-4">
           {next === false && (
-            <div className="flex flex-col gap-4  items-center w-max shrink-0 justify-center text-md animate-[divAnimate_.4s_ease_forwards] duration-300">
-              <h1 className="w-full p-2 bg-white/10 text-center rounded-xl text-2xl font-bold">
+            <div className="flex flex-col xl:gap-4 gap-2  items-center w-full  justify-center text-md animate-[divAnimate_.4s_ease_forwards] duration-300">
+              <h1 className="w-full p-2 bg-white/10 text-center rounded-xl xl:text-2xl font-bold">
                 Complete basic information
               </h1>
               <FaUserTie className="text-6xl" />
               {/* name and username */}
-              <div className="flex gap-4 items-center w-full">
+              <div className="flex xl:flex-row flex-col  gap-4 items-center w-full">
                 <div className="flex flex-col w-full border-b p-2">
                   <label htmlFor="name">what's your first name?</label>
                   <input
@@ -97,7 +98,7 @@ const Step1 = ({ setSign, sign }) => {
                   />
                 </div>
               </div>
-              <div className="flex items-center gap-4 w-full">
+              <div className="flex items-center xl:flex-row flex-col gap-4 w-full">
                 {/* password */}
                 <div className="flex flex-col w-full border-b p-2">
                   <label htmlFor="password">Choose a password</label>
@@ -126,7 +127,7 @@ const Step1 = ({ setSign, sign }) => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4  w-full ">
+              <div className="flex items-center xl:flex-row flex-col gap-4  w-full ">
                 <div className="flex flex-col w-full border-b p-2">
                   <label htmlFor="github">Enter github username</label>
                   <input
@@ -163,7 +164,7 @@ const Step1 = ({ setSign, sign }) => {
                   ) {
                     setNext(true);
                   } else {
-                    <Alert text={"please fill all the inputs"} state={true} />;
+                    setAlert(true);
                   }
                 }}
                 className="flex gap-4 items-center w-full p-2 bg-white/10 rounded-xl hover:bg-white/20 duration-300 cursor-pointer justify-center"
@@ -187,6 +188,9 @@ const Step1 = ({ setSign, sign }) => {
           {/* lastbtn */}
           {final === true && <FinalPage sendData={sendData} />}
         </div>
+        {alert === true && (
+          <Alert setAlert={setAlert} text={"Please fill all the bank spaces"} />
+        )}
       </div>
     )
   );

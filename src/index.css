@@ -118,3 +118,13 @@
     opacity: 1;
   }
 }
+@keyframes popUp {
+  from {
+    transform: translateY(-100);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-50%);
+    opacity: 1;
+  }
+}

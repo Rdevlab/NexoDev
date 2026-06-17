@@ -43,18 +43,18 @@ const Skills = (props) => {
     <>
       {next1 === false && (
         <div className="flex flex-col gap-4 animate-[divAnimate_.4s_ease_forwards] duration-300">
-          <h1 className="w-full p-2 bg-white/10 text-center rounded-xl text-2xl font-bold">
+          <h1 className="w-full p-2 bg-white/10 text-center rounded-xl xl:text-2xl font-bold">
             Choose technologies you know
           </h1>
-          <div className="w-full p-2 flex flex-wrap justify-center scrollbar overflow-y-scroll h-70 gap-4 rounded-2xl">
+          <div className="w-full p-2 flex flex-wrap justify-center scrollbar overflow-y-scroll h-70  gap-4 rounded-2xl">
             {technologies.map((el, index) => {
               return (
                 <div
-                  className="flex flex-col gap-2 z-2 relative duration-300 hover:bg-white/2 hover:scale-110 cursor-pointer items-center justify-center w-30 h-30 p-2 rounded-xl text-white/60 border"
+                  className="flex flex-col gap-2 z-2 relative duration-300 hover:bg-white/2 hover:scale-110 cursor-pointer items-center justify-center xl:w-30 w-20 h-20 xl:h-30 p-2 rounded-xl text-white/60 border"
                   key={index}
                 >
-                  <el.Icon className="text-6xl z-1" />
-                  <span className="z-1">{el.name}</span>
+                  <el.Icon className="xl:text-6xl text-4xl z-1" />
+                  <span className="text-sm xl:text-md z-1">{el.name}</span>
                   <span
                     onClick={(e) => {
                       const tech = props.tech;

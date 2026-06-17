@@ -23,8 +23,8 @@ const Projects = (props) => {
   const [profile, setProfile] = useState(props.image);
   return (
     <>
-      <div className="absolute top-10 bottom-10 left-26 right-16 bg-white/10 backdrop-blur-sm p-4 flex gap-2 flex-col rounded-xl">
-        <div className="flex gap-4 justify-around items-center p-2 overflow-scroll bg-black/50 text-white rounded-t-2xl">
+      <div className="absolute xl:top-10 top-4 xl:bottom-10  bottom-4 animate-[divAnimate_.5s_ease] xl:left-26 left-4 xl:right-16 right-4 bg-white/10 backdrop-blur-sm p-4 flex gap-2 overflow-x-scroll flex-col rounded-xl">
+        <div className="flex gap-4 justify-around items-center p-2 bg-black/50 text-white overflow-scroll rounded-t-2xl">
           <span className="w-14 flex items-center justify-center gap-2 shrink-0 flex-col border-r">
             Round <SiSaturn />
           </span>
@@ -58,11 +58,11 @@ const Projects = (props) => {
           return (
             <div
               key={index ?? `${e.designer}-${index}`}
-              className="w-full h-max border border-white shadow-2xl rounded-xl bg-white/10 border-white/20 text-white backdrop-blur-sm p-2 animate-[moveUp_.5s_ease_forwards] opacity-0 flex flex-col gap-2"
+              className="w-full h-max border border-white shadow-2xl rounded-xl bg-white/10 border-white/20 text-white backdrop-blur-sm p-2 animate-[moveUp_.5s_ease_forwards] opacity-0  flex flex-col gap-2"
               style={{ animationDelay }}
             >
-              <div className="flex flex-col bg-cover justify-center items-between rounded-xl">
-                <div className="flex gap-4 justify-around items-center p-2 overflow-scroll">
+              <div className="flex flex-col shrink-0 overflow-scroll w-full justify-center items-between rounded-xl">
+                <div className="flex gap-4 shrink-0 justify-around items-center p-2 w-full">
                   <span className="w-14 shrink-0 font-bold text-xl text-center flex items-center justify-center border-r">
                     {e.round}
                   </span>
@@ -124,6 +124,7 @@ const Projects = (props) => {
         goHome={props.goHome}
         setPassword={props.setPassword}
         setUsername={props.setUsername}
+        setAccount={props.setAccount}
       />
       {mess == true && <Messanger user={user} />}
     </>

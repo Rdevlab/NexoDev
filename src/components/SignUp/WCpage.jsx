@@ -9,10 +9,10 @@ const WCpage = ({ setSign, sign }) => {
       <>
         {cont == false ? (
           <div className="w-full h-screen flex  flex-col gap-4 items-center justify-center">
-            <h1 className=" text-6xl font-bold  text-white/90 w-max animate-[titleAnimate_1s_ease_forwards]">
+            <h1 className=" xl:text-6xl text-2xl font-bold  text-white/90 w-max animate-[titleAnimate_1s_ease_forwards]">
               Welcome to NexoDev Team
             </h1>
-            <p className="text-2xl text-white/90 max-w-[30ch] text-center animate-[infoAnimate_1s_1s_ease_forwards] opacity-0">
+            <p className="xl:text-2xl text-white/90 max-w-[30ch] text-center animate-[infoAnimate_1s_1s_ease_forwards] opacity-0">
               Join a friendly area, where all talents are being shared for a
               better growth path way
             </p>
