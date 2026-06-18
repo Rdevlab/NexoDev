@@ -2,6 +2,7 @@ import React, { use, useState } from "react";
 import { FaEye, FaKey, FaUser, FaUserTie } from "react-icons/fa";
 import Users from "../Users/Users";
 import Projects from "../Projects/Projects";
+import { GiReturnArrow } from "react-icons/gi";
 
 const Login = (props) => {
   const [login, setLogin] = useState(false);
@@ -17,7 +18,7 @@ const Login = (props) => {
   return (
     <div>
       {login == false && (
-        <div className="flex w-80 flex-col justify-center shadow-2xl items-center gap-4 p-8 rounded-xl  absolute top-1/2 left-1/2 -translate-x-1/2 text-white/80 -translate-y-1/2">
+        <div className="flex w-80 flex-col justify-center shadow-2xl items-center gap-4 p-8 rounded-xl  absolute top-1/2 left-1/2 -translate-x-1/2 text-white/80 -translate-y-1/2 animate-[divAnimate_.4s_ease_forwards]">
           <div className="flex flex-col w-full gap-4 items-center z-50 absolute backdrop-blur-sm p-8 rounded-xl bg-white/10">
             <FaUserTie className="text-6xl" />
             <h1 className="text-3xl font-bold">Login</h1>
@@ -93,6 +94,14 @@ const Login = (props) => {
           setAccount={setAccount}
         />
       )}
+      <button
+        onClick={() => {
+          props.setDashboard(false);
+        }}
+        className="flex p-2 text-2xl rounded-full backdrop-blur-xs bg-white/30 rounded-full absolute top-4 left-2 text-white"
+      >
+        <GiReturnArrow />
+      </button>
     </div>
   );
 };

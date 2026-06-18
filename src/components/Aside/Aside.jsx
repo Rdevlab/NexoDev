@@ -10,7 +10,7 @@ const Aside = () => {
     document.querySelector("#userContainer").classList.toggle("h-130");
   }
   return (
-    <div className="absolute top-10 h-130 noscrollbar  left-0 flex gap-2 z-30">
+    <div className="absolute top-20 h-130 noscrollbar  left-0 flex gap-2 z-30">
       <div
         className="p-2 rounded-r-2xl bg-white/30 backdrop-blur-sm flex flex-col h-16 shrink-0 w-18 overflow-y-scroll gap-2 duration-300"
         id="userContainer"

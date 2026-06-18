@@ -35,29 +35,13 @@
   user-select: none;
 }
 
-/* pruple color code */
-#00010d
-#010326
-#2d0140
-#660273
-#a305a6
-
-/* green  */
-#f8f8f8
-#337418
-#5dd62c
-#202020
-#0f0f0f
-
-.colorpicker {
-  color: #c6c6c7;
-}
-
 :root {
   --background: #000000;
-  --card: #016437;
-  --primaryyelow: #fdd300;
-  --primary: #6d001a;
+  --shadow: #00010d;
+  --background: #010326;
+  --primary: #2d0140;
+  --primary1: #660273;
+  --primary2: #a305a6;
   --text: #ffffff;
 }
 
@@ -125,6 +109,16 @@
   }
   to {
     transform: translateY(-50%);
+    opacity: 1;
+  }
+}
+@keyframes textAnimate {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
     opacity: 1;
   }
 }
