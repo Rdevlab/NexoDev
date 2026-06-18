@@ -9,19 +9,22 @@ const App = () => {
   const [sign, setSign] = useState(false);
   const [dashboard, setDashboard] = useState(false);
   return (
-    <div className="bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuRSkxuyei_jaRLeXzKa5wF1YurXf6M67gYkMZvnwggATEIq22FHdJhkOC&s=10')] w-full h-screen bg-no-repeat bg-fixed overflow-scroll bg-cover bg-center">
+    <>
+      {" "}
       {dashboard == true && (
-        <>
-          <Aside />
-          {sign == false ? (
-            <Login setSign={setSign} setDashboard={setDashboard} />
-          ) : (
-            <SignUp sign={sign} setSign={setSign} />
-          )}
-        </>
+        <div className="bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuRSkxuyei_jaRLeXzKa5wF1YurXf6M67gYkMZvnwggATEIq22FHdJhkOC&s=10')] w-full h-screen bg-no-repeat bg-fixed overflow-scroll bg-cover bg-center">
+          <>
+            <Aside />
+            {sign == false ? (
+              <Login setSign={setSign} setDashboard={setDashboard} />
+            ) : (
+              <SignUp sign={sign} setSign={setSign} />
+            )}
+          </>
+        </div>
       )}
       {dashboard == false && <Header setDashboard={setDashboard} />}
-    </div>
+    </>
   );
 };
 
