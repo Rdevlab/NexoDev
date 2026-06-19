@@ -31,7 +31,7 @@ const Navbar = ({ setDashboard }) => {
         <img src="./devgrouplogo.png" alt="" className="h-10" />
         Nexo Development Group
       </div>
-      <div className="flex items-center gap-10 duration-400">
+      <div className="hidden items-center gap-10 duration-400 xl:flex md:flex">
         {links.map((link, index) => {
           return (
             <a
@@ -43,15 +43,15 @@ const Navbar = ({ setDashboard }) => {
             </a>
           );
         })}
-        <button
-          onClick={() => {
-            setDashboard(true);
-          }}
-          className="flex items-center gap-2 px-4 p-1 border rounded-full bg-white/10 cursor-pointer"
-        >
-          <BiUser /> Login
-        </button>
       </div>
+      <button
+        onClick={() => {
+          setDashboard(true);
+        }}
+        className="flex items-center gap-2 px-4 p-1 border rounded-full bg-white/10 cursor-pointer"
+      >
+        <BiUser /> Login
+      </button>
     </div>
   );
 };

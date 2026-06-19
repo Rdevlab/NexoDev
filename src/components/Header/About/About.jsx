@@ -28,7 +28,7 @@ const About = () => {
       <span className="flex gap-2 items-center px-4 p-1 border text-[var(--text)] rounded-full">
         <IoMdCheckmarkCircleOutline /> About us
       </span>
-      <div className="w-full h-full flex flex justify-center gap-8 items-center p-10 gap-4">
+      <div className="w-full h-full flex flex-col xl:flex-row md:flex-row justify-center gap-8 items-center p-10 gap-4">
         {items.map((item, index) => {
           return (
             <div

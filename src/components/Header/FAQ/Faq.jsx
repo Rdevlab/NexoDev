@@ -31,21 +31,28 @@ const Faq = () => {
   ];
   return (
     <div
-      className="flex flex-col gap-4 w-full h-screen justify-center bg-[var(--background)] items-center p-10 "
+      className="flex flex-col gap-4 w-full min-h-screen justify-center bg-[var(--background)] items-center p-10 "
       id="faq"
     >
       <span className="flex items-center px-4 p-1 rounded-full text-[var(--text)] border gap-2">
         <IoMdCheckmarkCircleOutline /> Frequently asked questions
       </span>
-      <div className="w-full h-full flex flex-col p-4 gap-4">
+      <div className="w-full h-full justify-center flex flex-wrap p-4 gap-6">
         {faqData.map((item, index) => {
           return (
-            <div className="w-full flex-col gap-4 p-2 text-[var(--text)] border rounded-xl flex justify-between">
-              <div className="flex gap-4 items-center">
-                <div>{index + 1}</div>
-                <h1 className="text-xl">{item.question}</h1>
+            <div
+              className="w-80 flex-col items-center p-2 gap-4 p-2 text-[var(--text)] border rounded-xl flex justify-start"
+              key={index}
+              onClick={(e) => {
+                e.target.classList.toggle("group");
+              }}
+            >
+              <div className="flex p-2 w-10 h-10 rounded-full border rounded-full items-center justify-center">
+                {index + 1}
               </div>
-              <p className="px-8"> a. {item.answer}</p>
+              <h1 className="">{item.question}</h1>
+
+              <p className=""> a. {item.answer}</p>
             </div>
           );
         })}

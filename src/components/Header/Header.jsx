@@ -9,7 +9,7 @@ import Contact from "./Contact/Contact";
 const Header = ({ setDashboard }) => {
   return (
     <>
-      <div className="w-full h-screen bg-[url('https://a-static.besthdwallpaper.com/sunset-dusk-wallpaper-3000x2000-88265_42.jpg')] bg-center bg-cover text-white flex justify-center items-center">
+      <div className="w-full h-screen bg-center bg-cover text-white flex justify-center items-center">
         <Navbar setDashboard={setDashboard} />
         <Hero />
       </div>

@@ -35,20 +35,24 @@ const Services = () => {
   ];
   return (
     <div
-      className="flex flex-col w-full h-screen gap-12 items-center justify-center bg-[var(--background)] p-10"
+      className="flex flex-col w-full min-h-screen gap-12 items-center justify-center bg-[var(--background)] p-10"
       id="services"
     >
       <span className="flex items-center px-4 p-1 rounded-full text-[var(--text)] border gap-2">
         <IoMdCheckmarkCircleOutline /> Our Services
       </span>
-      <div className="flex gap-4 flex-wrap justify-center items-center w-full h-full">
+      <div className="flex gap-6 flex-wrap justify-center items-center w-full h-full">
         {serviceList.map((item, index) => {
           return (
             <div
-              className="border text-[var(--text)] w-150 h-60 rounded-xl flex items-center overflow-hidden"
+              className="border text-[var(--text)] xl:w-150 w-full xl:h-60 h-124 rounded-xl flex flex-col xl:flex-row items-center overflow-hidden"
               key={index}
             >
-              <img src={item.image} alt="" className="h-full w-[40%]" />
+              <img
+                src={item.image}
+                alt=""
+                className="xl:h-full xl:w-[40%] w-full"
+              />
               <div className="flex flex-col gap-4 w-full h-full p-8">
                 <span className="flex flex-col items-center gap-2">
                   <item.Icon size={30} />
