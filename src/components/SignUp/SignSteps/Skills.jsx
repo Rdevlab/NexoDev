@@ -13,6 +13,7 @@ import {
   FaBootstrap,
   FaDatabase,
   FaArrowRight,
+  FaArrowLeft,
 } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import ActiveProjects from "./ActiveProjects";
@@ -76,14 +77,25 @@ const Skills = (props) => {
               );
             })}
           </div>
-          <button
-            onClick={() => {
-              setNext1(true);
-            }}
-            className="flex gap-4 items-center w-full p-2 bg-white/10 rounded-xl hover:bg-white/20 duration-300 cursor-pointer justify-center"
-          >
-            Next <FaArrowRight />
-          </button>
+          <div className="flex gap-4 w-full items-center">
+            <button
+              onClick={() => {
+                props.setNext(false);
+              }}
+              className="flex gap-4 items-center w-full p-2 bg-white/10 rounded-xl hover:bg-white/20 duration-300 cursor-pointer justify-center"
+            >
+              <FaArrowLeft />
+              Back
+            </button>
+            <button
+              onClick={() => {
+                setNext1(true);
+              }}
+              className="flex gap-4 items-center w-full p-2 bg-white/10 rounded-xl hover:bg-white/20 duration-300 cursor-pointer justify-center"
+            >
+              Next <FaArrowRight />
+            </button>
+          </div>
         </div>
       )}
 
@@ -93,6 +105,7 @@ const Skills = (props) => {
           setGroup={props.setGroup}
           setFinal={props.setFinal}
           final={props.final}
+          setNext1={setNext1}
         />
       )}
     </>

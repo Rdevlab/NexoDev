@@ -5,6 +5,8 @@ import About from "./About/About";
 import Services from "./Services/Services";
 import Faq from "./FAQ/Faq";
 import Contact from "./Contact/Contact";
+import Footer from "./Footer/Footer";
+import OurTasks from "./OurTasks/OurTasks";
 
 const Header = ({ setDashboard }) => {
   return (
@@ -15,8 +17,11 @@ const Header = ({ setDashboard }) => {
       </div>
       <About />
       <Services />
+      <OurTasks />
       <Faq />
+
       <Contact />
+      <Footer />
     </>
   );
 };

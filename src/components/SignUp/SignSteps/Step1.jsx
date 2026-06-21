@@ -13,7 +13,8 @@ import ActiveProjects from "./ActiveProjects";
 import Users from "../../Users/Users";
 import FinalPage from "./FinalPage";
 import Alert from "../../Alert/Alert";
-const Step1 = ({ setSign, sign }) => {
+
+const Step1 = ({ setSign, sign, setCont }) => {
   const [users, setUsers] = useState(Users);
   const [name, setName] = useState("");
   const [username, setUname] = useState("");
@@ -152,25 +153,36 @@ const Step1 = ({ setSign, sign }) => {
                   />
                 </div>
               </div>
-              <button
-                onClick={() => {
-                  if (
-                    document.querySelector("#name").value != "" &&
-                    document.querySelector("#username").value != "" &&
-                    document.querySelector("#password").value != "" &&
-                    document.querySelector("#insta").value != "" &&
-                    document.querySelector("#github").value != "" &&
-                    document.querySelector("#whatsapp").value != ""
-                  ) {
-                    setNext(true);
-                  } else {
-                    setAlert(true);
-                  }
-                }}
-                className="flex gap-4 items-center w-full p-2 bg-white/10 rounded-xl hover:bg-white/20 duration-300 cursor-pointer justify-center"
-              >
-                Next <FaArrowRight />
-              </button>
+              <div className="flex items-center w-full gap-2">
+                <button
+                  onClick={() => {
+                    setSign(false);
+                  }}
+                  className="flex gap-4 items-center w-full p-2 bg-white/10 rounded-xl hover:bg-white/20 duration-300 cursor-pointer justify-center"
+                >
+                  <FaArrowLeft />
+                  Back
+                </button>
+                <button
+                  onClick={() => {
+                    if (
+                      document.querySelector("#name").value != "" &&
+                      document.querySelector("#username").value != "" &&
+                      document.querySelector("#password").value != "" &&
+                      document.querySelector("#insta").value != "" &&
+                      document.querySelector("#github").value != "" &&
+                      document.querySelector("#whatsapp").value != ""
+                    ) {
+                      setNext(true);
+                    } else {
+                      setAlert(true);
+                    }
+                  }}
+                  className="flex gap-4 items-center w-full p-2 bg-white/10 rounded-xl hover:bg-white/20 duration-300 cursor-pointer justify-center"
+                >
+                  Next <FaArrowRight />
+                </button>
+              </div>
             </div>
           )}
 
@@ -182,6 +194,7 @@ const Step1 = ({ setSign, sign }) => {
               setGroup={setGroup}
               setFinal={setFinal}
               final={final}
+              setNext={setNext}
             />
           )}
 

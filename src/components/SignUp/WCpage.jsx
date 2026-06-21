@@ -26,7 +26,7 @@ const WCpage = ({ setSign, sign }) => {
             </button>
           </div>
         ) : (
-          <Step1 setSign={setSign} sign={sign} />
+          <Step1 setSign={setSign} sign={sign} setCont={setCont} />
         )}
       </>
     )

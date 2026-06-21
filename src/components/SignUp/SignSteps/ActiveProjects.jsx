@@ -1,6 +1,6 @@
 import React from "react";
 import ActiveProList from "../../../assests/logos/ActiveProList";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const ActiveProjects = (props) => {
   return (
@@ -36,14 +36,24 @@ const ActiveProjects = (props) => {
             );
           })}
         </div>
-        <button
-          onClick={() => {
-            props.setFinal(true);
-          }}
-          className="flex gap-4 items-center w-full p-2 bg-white/10 rounded-xl hover:bg-white/20 duration-300 cursor-pointer justify-center"
-        >
-          Next <FaArrowRight />
-        </button>
+        <div className="flex items-center w-full gap-2">
+          <button
+            onClick={() => {
+              props.setNext1(false);
+            }}
+            className="flex gap-4 items-center w-full p-2 bg-white/10 rounded-xl hover:bg-white/20 duration-300 cursor-pointer justify-center"
+          >
+            <FaArrowLeft /> Back
+          </button>
+          <button
+            onClick={() => {
+              props.setFinal(true);
+            }}
+            className="flex gap-4 items-center w-full p-2 bg-white/10 rounded-xl hover:bg-white/20 duration-300 cursor-pointer justify-center"
+          >
+            Next <FaArrowRight />
+          </button>
+        </div>
       </div>
     )
   );

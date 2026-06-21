@@ -35,7 +35,7 @@ const Services = () => {
   ];
   return (
     <div
-      className="flex flex-col w-full min-h-screen gap-12 items-center justify-center bg-[var(--background)] p-10"
+      className="flex flex-col w-full min-h-screen gap-12 items-center justify-center bg-[var(--background)] p-10 pt-20"
       id="services"
     >
       <span className="flex items-center px-4 p-1 rounded-full text-[var(--text)] border gap-2">
@@ -45,16 +45,16 @@ const Services = () => {
         {serviceList.map((item, index) => {
           return (
             <div
-              className="border text-[var(--text)] xl:w-150 w-full xl:h-60 h-124 rounded-xl flex flex-col xl:flex-row items-center overflow-hidden"
+              className="border text-[var(--text)] xl:w-150 w-full xl:h-60 group cursor-pointer h-124 rounded-xl flex border-transparent p-2 hover:text-[var(--primary2)] hover:border-[var(--primary2)] flex-col xl:flex-row items-center overflow-hidden"
               key={index}
             >
               <img
                 src={item.image}
                 alt=""
-                className="xl:h-full xl:w-[40%] w-full"
+                className="xl:h-full xl:w-[40%] w-full rounded-xl grayscale group-hover:scale-110 duration-300"
               />
-              <div className="flex flex-col gap-4 w-full h-full p-8">
-                <span className="flex flex-col items-center gap-2">
+              <div className="flex flex-col gap-4 w-full h-full p-8 duration-300">
+                <span className="flex flex-col items-center gap-2 duration-3--">
                   <item.Icon size={30} />
                   <h1 className="text-2xl text-center">{item.name}</h1>
                 </span>

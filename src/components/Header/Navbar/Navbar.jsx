@@ -17,6 +17,10 @@ const Navbar = ({ setDashboard }) => {
       name: "Services",
     },
     {
+      link: "#projects",
+      name: "Projects",
+    },
+    {
       link: "#faq",
       name: "FAQ",
     },
@@ -26,7 +30,7 @@ const Navbar = ({ setDashboard }) => {
     },
   ];
   return (
-    <div className="w-full z-50  backdrop-blur-xs p-4 px-6 border-b border-[var(--text)]/20 fixed top-0 right-0 left-0 flex  gap-4 items-center justify-between">
+    <div className="w-full z-50  backdrop-blur-xs p-2 px-6 border-b border-[var(--text)]/20 fixed top-0 right-0 left-0 flex bg-[var(--background)]  gap-4 items-center justify-between">
       <div className="flex gap-2 items-center">
         <img src="./devgrouplogo.png" alt="" className="h-10" />
         Nexo Development Group
@@ -48,7 +52,7 @@ const Navbar = ({ setDashboard }) => {
         onClick={() => {
           setDashboard(true);
         }}
-        className="flex items-center gap-2 px-4 p-1 border rounded-full bg-white/10 cursor-pointer"
+        className="flex items-center gap-2 px-4 p-1 border rounded-full bg-white/10 hover:bg-[var(--primary1)] duration-300 hover:border-[var(--primary1)] cursor-pointer"
       >
         <BiUser /> Login
       </button>

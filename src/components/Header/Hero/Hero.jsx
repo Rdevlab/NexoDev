@@ -90,15 +90,15 @@ const Hero = () => {
         onClick={() => {
           prevSlide();
         }}
-        className="absolute cursor-pointer top-1/2 xl:left-10 left-4 z-30  flex items-center justify-center p-2 rounded-full bg-black/60"
+        className="absolute cursor-pointer top-1/2 xl:left-10 left-4 z-30 group  flex items-center hover:text-[var(--text)] duration-300 justify-center p-2 rounded-full bg-black/60 hover:bg-[var(--primary)]/80"
       >
-        <BiChevronLeft size={30} />
+        <BiChevronLeft className="duration-300" size={30} />
       </button>
       <button
         onClick={() => {
           nextSlide();
         }}
-        className="absolute cursor-pointer top-1/2 xl:right-10 right-4 z-30 flex items-center justify-center p-2 rounded-full bg-black/60"
+        className="absolute cursor-pointer top-1/2 xl:right-10 right-4 z-30 flex items-center hover:bg-[var(--primary2)]/80 duration-300 justify-center p-2 rounded-full bg-black/60"
       >
         <BiChevronRight size={30} />
       </button>
@@ -107,6 +107,7 @@ const Hero = () => {
         {developmentGroup.map((__, index) => {
           return (
             <button
+              key={index}
               onClick={() => {
                 setCount(index);
               }}
@@ -124,9 +125,10 @@ const Hero = () => {
         </p>
         <a
           href="#about"
-          className="flex gap-2 animate-[textAnimate_.5s_1s_ease_forwards] opacity-0 items-center justify-center px-6 p-1 rounded-full text-[var(--text)] border"
+          className="flex gap-2 hover:text-[var(--primary2)] duration-300 relative hover:bg-[var(--text)]/10 font-bold animate-[textAnimate_.5s_1s_ease_forwards] opacity-0 items-center justify-center px-6 p-1 rounded-full text-[var(--text)] border"
         >
           {"Visit"} <CgChevronDoubleDown size={20} />
+          <span className="absolute w-full h-full rounded-full backdrop-blur-xs"></span>
         </a>
       </div>
     </div>
